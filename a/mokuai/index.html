@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>模块_门户管理</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="" />
+		<link rel="stylesheet" type="text/css" href="/templets/menhu/css/base_test1.css">
+		<link rel="stylesheet" type="text/css" href="/templets/menhu/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/templets/menhu/css/alter.css">
+		<style type="text/css">
+			.result { padding-left: 30px; padding-right: 30px;}
+		</style>
+	</head>
+
+	<body>
+		<style>
+			.headercom {
+				line-height: 39px;
+				font-size: 14px;
+				color: #666;
+				text-align: center;
+				float: left;
+				margin-right: 15px;
+				display: inline;
+				padding-top: 1px;
+			}
+			.headercom:hover {
+				color: #ff9100;
+			}
+			.userxufei:hover {
+				opacity: 0.8;
+			}
+			.top-contact:hover {
+				opacity: 1;
+			}
+		</style>
+		<div class="user-top user-top-a" style="">
+			<div class="w1200 clearfix">
+				<a href="/" target="_blank" class="headercom">首页</a>
+				
+				<a href="/a/jindu/"  target="_blank" class="headercom">项目进度</a>
+				
+				<a href="/a/menhu/"  target="_blank" class="headercom">门户定制</a>
+				<a class='headercom' style='color:#ff9100;' href='/a/mokuai/' >模块</a>
+			</div>
+		</div>
+		<div class="user-top" style="background:#fafafa;margin-bottom:2px;" id="fixed-xuanfu">
+			<div class="w1200 clearfix">
+				<a href="http://888pic.com/" class="logo fl"></a>
+				<form  name="formsearch" action="/plus/search.php">
+				<div class="top-search  fr" style="left: 0px;top: 0px;"><input type="text" id="so-kw" name="q" style="width: 569px;height: 46px;" placeholder="搜单位名称" class="text-search fl" maxlength="30"><input type="submit" value="搜索" class="but-search fl" id="z_searchbtn" style="font-size: 18px;height: 50px;">
+				</div>
+				</form>
+			</div>
+		</div>
+		<div id="main">
+			<div class="wrapper">
+				<div class="type" style="padding-left: 30px; padding-right: 30px; min-width: 1200px;">
+					<div class="type-nav">
+						<span class="on">全部</span>&nbsp;<a title="电脑端" href="/plus/list.php?tid=8&device=%E7%94%B5%E8%84%91%E7%AB%AF">电脑端</a>&nbsp;<a title="移动端" href="/plus/list.php?tid=8&device=%E7%A7%BB%E5%8A%A8%E7%AB%AF">移动端</a>&nbsp;<br/>
+					</div>
+					<!--菜单栏新改-->
+					<div class="nav-type">
+						<div class="type-item clearfix">
+							<!--分类-->
+							<div class="item-tit fl">
+								<span>类型</span>
+							</div>
+							<div class="item-main">
+								<div class="list">
+									<span class="on">全部</span>&nbsp;<a title="列表" href="/plus/list.php?tid=8&type=%E5%88%97%E8%A1%A8">列表</a>&nbsp;<a title="标题" href="/plus/list.php?tid=8&type=%E6%A0%87%E9%A2%98">标题</a>&nbsp;<a title="分页" href="/plus/list.php?tid=8&type=%E5%88%86%E9%A1%B5">分页</a>&nbsp;<a title="导航" href="/plus/list.php?tid=8&type=%E5%AF%BC%E8%88%AA">导航</a>&nbsp;<a title="页头" href="/plus/list.php?tid=8&type=%E9%A1%B5%E5%A4%B4">页头</a>&nbsp;<a title="页尾" href="/plus/list.php?tid=8&type=%E9%A1%B5%E5%B0%BE">页尾</a>&nbsp;<a title="表单" href="/plus/list.php?tid=8&type=%E8%A1%A8%E5%8D%95">表单</a>&nbsp;<a title="表格" href="/plus/list.php?tid=8&type=%E8%A1%A8%E6%A0%BC">表格</a>&nbsp;<a title="弹窗" href="/plus/list.php?tid=8&type=%E5%BC%B9%E7%AA%97">弹窗</a>&nbsp;<a title="登录" href="/plus/list.php?tid=8&type=%E7%99%BB%E5%BD%95">登录</a>&nbsp;<a title="按钮" href="/plus/list.php?tid=8&type=%E6%8C%89%E9%92%AE">按钮</a>&nbsp;<a title="字段" href="/plus/list.php?tid=8&type=%E5%AD%97%E6%AE%B5">字段</a>&nbsp;<a title="其他" href="/plus/list.php?tid=8&type=%E5%85%B6%E4%BB%96">其他</a>&nbsp;<br/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="result" style="min-width: 1200px;">
+					<div class="content-mokuai clearfix" id="data-list">
+						<div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0713/224.html" target="_blank"><img class="lazy" alt="原字体变成艺术字体" src="/uploads/allimg/200713/1-200G3112P10-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0713/216.html" target="_blank"><img class="lazy" alt="移动互联网" src="/uploads/allimg/200713/1-200G31115470-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0713/217.html" target="_blank"><img class="lazy" alt="css文字两端对齐方式" src="/uploads/allimg/200713/1-200G31116310-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0713/219.html" target="_blank"><img class="lazy" alt="百度一下" src="/uploads/allimg/200713/1-200G3111T20-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0713/222.html" target="_blank"><img class="lazy" alt="深入理解高度" src="/uploads/allimg/200713/1-200G31122320-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0713/223.html" target="_blank"><img class="lazy" alt="进度条jquery进度条进度代码" src="/uploads/allimg/200713/1-200G31124260-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0713/221.html" target="_blank"><img class="lazy" alt="html 移动互联网终端设备" src="/uploads/allimg/200713/1-200G31121170-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0713/220.html" target="_blank"><img class="lazy" alt="登录企业邮箱" src="/uploads/allimg/200713/1-200G31119360-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0713/218.html" target="_blank"><img class="lazy" alt="百度翻译" src="/uploads/allimg/200713/1-200G3111J30-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0710/215.html" target="_blank"><img class="lazy" alt="敬敬恭恭敬敬恭恭敬敬恭恭敬敬恭恭敬敬恭恭敬" src="/uploads/allimg/200710/1-200G01U4070-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0710/214.html" target="_blank"><img class="lazy" alt="在有城" src="/uploads/allimg/200710/1-200G01U3250-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0710/213.html" target="_blank"><img class="lazy" alt="ds魂牵梦萦 地在在有城" src="/uploads/allimg/200710/1-200G01U2470-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0710/212.html" target="_blank"><img class="lazy" alt="ds魂牵梦萦 地afdsafdfsa苛在在有城" src="/uploads/allimg/200710/1-200G01RG60-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0710/211.html" target="_blank"><img class="lazy" alt="删除大规模城" src="/uploads/allimg/200710/1-200G01R6130-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0710/210.html" target="_blank"><img class="lazy" alt="信息收集大规模 魂牵梦萦 魂牵梦萦 地模压" src="/uploads/allimg/200710/1-200G01R5280-L.jpg" style="display: inline;"></a>
+						</div><div class="img-item fl">
+							<a class="img" href="/a/mokuai/2020/0710/209.html" target="_blank"><img class="lazy" alt="客服缩略图" src="/uploads/allimg/200710/1-200G01R4240-L.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<a href="javascript:void(0)" class="more" id="more" page="2" type="1">加载更多</a>
+				</div>
+				<!--反馈弹窗-->
+				<div class="problem-feedback">
+					<div class="mask"></div>
+					<div class="problem">
+						<span class="close-mask"></span>
+						<p class="search-feedback">搜索问题反馈</p>
+						<div class="result-sel">
+							<ul>
+								<li class="current"><span>搜索无结果</span><i></i></li>
+								<li><span>搜到的模板质量不高</span><i></i></li>
+								<li class="last-sel"><span>搜索不准确</span><i></i></li>
+							</ul>
+							<div class="other-question">
+								<p>其他问题</p>
+								<textarea placeholder="在此输入内容" name="search-advise"></textarea>
+							</div>
+							<div class="contact">
+								<p>您的联系方式</p>
+								<input type="text" placeholder="请输入QQ或手机" name="adviser-contact">
+							</div>
+							<a href="javascript:void(0);">
+								<div class="sure-but">提交</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<input type="hidden" value="185" id="search_id">
+				<input type="hidden" value="1" id="search_p">
+				<input type="hidden" value="16" id="sphinxCount">
+			</div>
+		</div>
+		
+
+		
+		
+		<script src="/templets/menhu/js/jquery.js"></script>
+		<div class="footer">
+	<div class="foot">
+		<p>若有疑问，请联系QQ:1206762787，我们将尽快处理</p>
+		<p>
+			<a href="#" target="_blank">关于我们</a> - Copyright © 2016 沪ICP备1058741号-7</p>
+			
+			
+	</div>
+</div>
+
+
+
+
+<!--右侧悬浮-->
+
+<div id="fixed">
+	<div class="fixed-but">
+		<a href="javascript:void(0);" class="fankui">给我们点建议吧<i></i></a>
+		<div class="my-browse-but">
+			<i></i>
+			<span>我看过的</span>
+		</div>
+		<!-- <a href="" class="collect-web"><i></i><span>收藏本站</span></a> -->
+		<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=800053584" class="contact-kf">联系客服</a>
+		<div class="back-top" id="gotop"><i></i><span>返回顶部</span></div>
+	</div>
+
+	<div id="browse" class="clearfix">
+		<div class="browse-m clearfix">
+			<div class="browse-bg"></div>
+			<div class="browse">
+				<div class="browse-top">
+					<i class="close-but"></i>
+					<p class="title">我看过的</p>
+					<div class="my-browse">
+						<span></span>个模板
+					</div>
+				</div>
+				<div class="browse-center">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<!--反馈弹窗-->
+<div class="feedback">
+	<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+	<input type="hidden" name="action" value="post">
+	<input type="hidden" name="diyid" value="1">
+	<input type="hidden" name="do" value="2">
+	<div class="mask"></div>
+	<div class="feedback-box">
+		<h2>欢迎您留下对我们网站的宝贵建议！</h2>
+		<textarea name="goodidea" id="goodidea" style="width:90%;height:80" placeholder="您的意见或建议对我们非常宝贵，如经采取，您会领到相应的奖励"></textarea>
+		<div class="Leave-qq"><span>请留下您的QQ</span><input type="text" name="calltype" id="calltype" class="input-text" value="">
+		</div>
+		<div class="Leave-qq"><span>还有验证码</span><input name="validate" type="text" id="vdcode" style="text-transform:uppercase;" size="8"/>    
+		<img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="/include/vdimgck.php"/>    
+		<a href="javascript:vide(-1);" onClick="changeAuthCode();">看不清？ </a>
+		</div>
+		<input type="hidden" name="dede_fields" value="goodidea,multitext;calltype,text">
+		<input type="hidden" name="dede_fieldshash" value="094cd76a70da5fe4a2c6b185809665b2">
+		<div class="sub-but"><input type="submit" name="submit" value="提 交"></div>
+			<div class="sub-but-no">菊花疼，不想交了</div>
+	</div>
+	<div class="feedback-box-over"> 你的声音，我们的动力 感谢您的参与！
+	</div>
+	</form>
+</div>
+<div id="inspire-login-mask" style="width: 100%; height: 100%; opacity: 0.5; position: fixed; z-index: 5; top: 0px; left: 0px; display: none; background: black;"></div>
+
+
+
+<!--登录注册的弹窗暂时没有用着-->
+		<div class="Login">
+			<div class="Login-div">
+				<span class="close-but"></span>
+				<div class="login-title"></div>
+				<dl style="width:195px;">
+					<a href="javascript:;" onclick="toLogin()" id="login"><dt style="margin-left: 10px;"><img class="icon-qq" data-original="http://js.888pic.com/images/com/icon-qq.png"></dt></a>
+					<dd class="login-notice"></dd>
+				</dl>
+			</div>
+		</div>
+
+<script type="text/javascript">
+	// 给我们留言
+			$(".fankui").click(function(){
+				$("#inspire-login-mask").show();
+				$(".feedback").show();
+			});
+			//不想留言了
+			$(".sub-but-no").click(function(){
+				$("#inspire-login-mask").hide();
+				$(".feedback").hide();
+			});
+			//留言的验证码
+			function changeAuthCode() {    
+			
+			   var num =     new Date().getTime();  
+			
+			   var rand = Math.round(Math.random() * 10000);  
+			
+			   num = num + rand;  
+			
+			   $('#ver_code').css('visibility','visible');  
+			
+			   if ($("#vdimgck")[0]) {  
+			
+			       $("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;  
+			
+			   }  
+			
+			   return false;      
+			
+			}  
+			
+			
+</script>
+		<script src="/templets/menhu/js/base_v3.29.js"></script>
+		<script>
+			$(function() {
+				$('#error-area').on('click', '.r-s', function() {
+					var kw = $.trim($(this).text());
+					search(kw);
+				});
+
+
+
+				//弹窗的关闭
+				$(".problem-feedback .close-mask").click(function() {
+					$(".problem-feedback ").fadeOut(300);
+				});
+				
+
+				var keyword = $("#so-kw").val();
+				var sphinxCount = $("#sphinxCount").val();
+				
+			});
+		</script>
+		<script>
+			var fixedTop = $('#fixed-xuanfu').offset().top;
+			$(window).bind('scroll', function() {
+				if($(window).scrollTop() > fixedTop) {
+					$('#fixed-xuanfu').css('position', 'fixed');
+					$('#fixed-xuanfu').css('z-index', '9999');
+					$('#fixed-xuanfu').css('top', '0');
+					$('#fixed-xuanfu').css('left', '0');
+				} else {
+					$('#fixed-xuanfu').css('position', '');
+				}
+			});
+			$(function() {
+				$(".type-con a").on('click', function() {
+					$(this).parent().parent().fadeOut();
+				});
+
+				//选择标签 关闭
+				$(".nav-chosed .chosed-tab").find('span').click(function() {
+						$(this).parent().remove()
+					})
+			})
+		</script>
+		<script type="text/javascript">
+			// 首页异步加载列表
+			var loadConfig = {
+				url_api:'/plus/list.php',
+				typeid:8,
+				page:2, // 起始页码
+				pagesize:16, // 请求条数
+				loading : 0,
+			}
+			function  loadMoreApply(){
+				if(loadConfig.loading == 0){
+					 var typeid = loadConfig.typeid;
+					 var page = loadConfig.page;
+					 var pagesize = loadConfig.pagesize;
+					 var url = loadConfig.url_api,
+					 data={
+					 	ajax:'pullload',
+					 	typeid:typeid,
+					 	page:page,
+					 	pagesize:pagesize
+					 };
+						 loadConfig.loading = 1;
+						function ajax(url, data) {
+							$.ajax({
+								url: url,
+								data: data,
+								async: false,
+								type: 'GET',
+								dataType: 'json',
+								success: function(data) {
+									console.log(data);
+									// addContent(data);
+									arr = []
+									for (var d = 0; d < data.list.length; d++) {
+										arr.push({
+											sort: d,
+											src: data.list[d].picname,
+											href: data.list[d].arcurl
+										})
+									}
+									
+									
+									loadConfig.load_num = data.load_num;
+									console.log(loadConfig.page, loadConfig.load_num)
+									if(data.total<loadConfig.page*loadConfig.pagesize){
+										document.getElementById("more").removeEventListener('click', loadMoreApply, false);
+										document.getElementById("more").innerText="没有更多了"
+										document.getElementById("more").setAttribute("class","more more_over")
+										ishas = false
+									} else {
+										ishas = true
+									}
+									loadConfig.page++;
+									loadConfig.loading = 0;
+									
+									
+									loopComputer(arr, callfn)
+								}
+							});
+							
+						}
+						ajax(url,data);
+				}
+			}
+			// function addContent (rs){
+				// if(rs.statu== 1){
+					// var data = rs.list;
+					// var total = rs.total;
+					// var arr=[];
+					// var length = data.length;
+					// console.log(length)
+					// for(var i=0;i<length;i++){
+						// 
+						// arr.push('<div class="img-item fl">');
+						// arr.push('<a class="img" href="'+data[i].arcurl+'" target="_blank"><img class="lazy" alt="'+data[i].title+'" width="380" height="572" src="'+data[i].picname+'"/></a>');
+						// arr.push('<div class="img-pos">');
+						// arr.push('<a href="'+data[i].htmlfile+'" target="_blank">');
+						// arr.push('<div class="free-download"><i></i><span>免费下载</span></div>');
+						// arr.push('</a>');
+						// arr.push('<div class="img-opacity"></div>');
+						// arr.push('<a href="'+data[i].arcurl+'" target="_blank">');
+						// arr.push('<div class="img-but" target="_blank">');
+						// arr.push('<p>'+data[i].title+'</p>');
+						// arr.push('</div>');
+						// arr.push('</a>');
+						// arr.push('</div>');
+						// arr.push('</div>');
+					// }
+					// $('#data-list').append(arr.join(''));
+				// 
+					// loadConfig.load_num = rs.load_num;
+					// if(total<loadConfig.page*loadConfig.pagesize || loadConfig.page > loadConfig.load_num){
+						// // window.removeEventListener('srcoll',loadMoreApply,false);
+						// document.getElementById("more").removeEventListener('click', loadMoreApply, false);
+						// document.getElementById("more").innerText="没有更多了"
+						// document.getElementById("more").setAttribute("class","more more_over")
+					// }
+					// loadConfig.page++;
+					// loadConfig.loading = 0;
+					// 
+				// }
+			// }
+			function pullLoad(){
+				document.getElementById("more").addEventListener('click', loadMoreApply, false);
+			}
+			pullLoad()
+		</script>
+		<script type="text/javascript">
+			var imgs = $("#data-list").find('.img')
+			var arr = []
+			imgs.each(function (index) {
+				arr.push({
+					sort: index,
+					src: $(this).find('img').attr('src'),
+					href: $(this).attr('href')
+					
+				})
+			})
+			
+			// 计算图片等高--原理：先把小图拼成一个整体，把这个整体当成一张大图片，和指定宽度去缩放。然后用这个缩放比例再去计算出每张小图片宽高。
+			// 思路  取第一张图片高度，将所有图片设置和第一张图片等高 +++原理
+			function computerSize1(arr, pw) {
+				var result = []
+				var allw = arr[0].w // 第一张图片不计算
+				for (var c = 1; c < arr.length; c++) {
+					var h = arr[c].h // 暂存原始高
+					arr[c].h = arr[0].h // 
+					arr[c].w = arr[c].w * arr[c].h / h
+					allw += arr[c].w
+				}
+				var bili = pw / allw
+				for (var d = 0; d < arr.length; d++) {
+					result.push({
+						sort: arr[d].sort,
+						w: Math.floor(arr[d].w * bili),
+						h: Math.floor(arr[d].h * bili),
+						src: arr[d].src,
+						href: arr[d].href
+					})
+				}
+				return result
+			}
+		
+			// 获取图片尺寸
+			function Getsize(obj, long, callfn) {
+				var that = this
+				this.callfn = callfn
+				this.long = long
+				this.img = new Image()
+				this.img.src = obj.src
+				this.startm = new Date() * 1
+				this.num = 0
+				this.result = {
+					sort: obj.sort,
+					width: 0,
+					height: 0,
+					src: '',
+					href: obj.href
+				}
+				this.cleartimer = setInterval(function () {
+					that.num++
+					if (that.img.width || that.img.height) {
+						that.result.width = that.img.width, that.result.height = that.img.height, that.result.src = that.img.src
+						clearInterval(that.cleartimer)
+						return that.callfn(that.result)
+					} else if (new Date() *1 - that.startm > that.long) {
+						console.log('请求超时')
+						clearInterval(that.cleartimer)
+						return that.callfn(that.result)
+					}
+				}, 50)
+			}
+		
+			function loopComputer(arr, callfn) {
+				var temp = arr.slice()
+				if (!temp.length) {
+					return
+				}
+				var obj = temp.pop()
+				new Getsize(obj, 3000, callfn)
+				return loopComputer(temp, callfn)
+			}
+			
+			// 排序
+			function sort (arr) {
+				var arr = arr.slice()
+				var temp
+				newArr = []
+				for (var r = 0; r < arr.length; r++) {
+					for (s = 0; s < arr.length; s++) {
+						if (arr[r].sort < arr[s].sort) {
+							temp = arr[r]
+							arr[r] = arr[s]
+							arr[s] = temp
+						}
+					}
+				}
+				newArr = arr
+				return newArr
+			}
+			
+			var ishas = true // 是否还有数据
+			var yuarr = [] // 上次剩余
+			var imgarr = []
+			// 获取每张图片尺寸时的回调函数
+			function callfn (o) {
+				imgarr.push(o)
+				
+				if (imgarr.length != arr.length) return
+				imgarr = sort(imgarr)
+				console.log(imgarr)
+				var newArr = []
+				var mspace = 20 // 外间距
+				var imgw = 350 // 图片显示的大小
+				var pspace = 4 // 图片与包裹容器的内边距（边距*2）如：边距为4，写8，边距为6，写12
+				var pw = $("#data-list").width() + 20 // 减20为容错
+				for (var c = 0; c < imgarr.length; c++) {
+					newArr.push({sort: imgarr[c].sort, w:imgarr[c].width, h: imgarr[c].height, src: imgarr[c].src, href: imgarr[c].href})
+				}
+				if (yuarr.length >= 1) {
+					newArr = yuarr.concat(newArr)
+				}
+				var unit = Math.floor(pw/imgw) // 一行列数
+				var len = Math.ceil(newArr.length/unit) // 按内容实际分配列数
+				yuarr = []
+				var result = []
+				for (var g = 0; g < len; g++) { // 分组
+					var arr5 = newArr.splice(0, unit)
+					if (arr5.length < unit) {
+						if (!ishas) {
+							for (var s = 0; s < unit - arr5.length; s++) {
+								arr5.splice(arr5.length, 0, {sort: 100, w: 1000, h: 500, src: null, href: null})
+							}
+							result.push(computerSize1(arr5, pw-mspace*(unit-1) - (mspace + 2) * unit))
+						} else {
+							yuarr = arr5
+						}
+					} else {
+						result.push(computerSize1(arr5, pw-mspace*(unit-1) - (mspace + 2 ) * unit))
+					}
+				}
+				var html = ''
+				for (var m = 0; m < result.length; m++) {
+					// html += '<div style=" width: ' + pw + 'px;">'
+					for (var n = 0; n < result[m].length; n++) {
+						if (result[m][n].src != null) {
+							if (n == 0) {
+								html += '<div class="img-item" style="float:left; position: relative; margin-top:' + mspace + 'px; padding: '+ pspace +'px; width: '+ result[m][n].w +'px; height:' + result[m][n].h + 'px; animation-delay: ' + n*m*50 + 'ms;"><a href="' + result[m][n].href + '"><img src="' + result[m][n].src + '" style="width: '+ result[m][n].w +'px; height:' + result[m][n].h + 'px; " /></a></div>'
+							} else {
+								html += '<div class="img-item" style="float:left; position: relative; margin-top: ' + mspace + 'px; margin-left: ' + mspace + 'px; padding: ' + pspace +'px; width: '+ result[m][n].w +'px; height:' + result[m][n].h + 'px; animation-delay: ' + n*m*100 + 'ms;"><a href="' + result[m][n].href + '"><img src="' + result[m][n].src + '" style="width: '+ result[m][n].w +'px; height:' + result[m][n].h + 'px;" /></a></div>'
+							}
+						}
+					}
+					// html += '<div class="clear"></div></div>'
+				}
+				$("#data-list").append(html)
+				imgarr = []
+			}
+			
+			
+			
+			
+			$('#data-list').html('')
+			loopComputer(arr, callfn)
+			// 异步输入测试
+			// loopComputer(arr, callfn)
+			
+			
+			
+			
+			
+		</script>
+	</body>
+
+</html>

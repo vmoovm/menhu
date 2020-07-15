@@ -1,0 +1,1 @@
+INSERT INTO `mh_arctype` VALUES('4','0','0','50','门户定制','{cmspath}/a/menhu','1','index.html','1','17','-1','0','0','{style}/index_menhu.htm','{style}/list_menhu.htm','{style}/article_menhu.htm','{typedir}/{Y}/{M}{D}/{aid}.html','{typedir}/list_{tid}_{page}.html','default','','','','0','','','0','0','','','');

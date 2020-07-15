@@ -1,0 +1,1 @@
+{dede:img text='' width='1920' height='4119'} /uploads/161229/5-1612291RU6214.jpg {/dede:img}

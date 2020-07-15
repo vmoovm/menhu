@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>小模块</title>
+		<link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.css" />
+		<link type="text/css" rel="stylesheet" href="static/syntaxhighlighter/styles/shCoreEclipse.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link href="css/basic.css" rel="stylesheet" type="text/css" />
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
+		<script src="static/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/bootstrap/tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/bootstrap/collapse.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/syntaxhighlighter/scripts/shCore.js"  type="text/javascript" ></script>
+		<script src="static/syntaxhighlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
+		<script src="static/syntaxhighlighter/scripts/shBrushXml.js" type="text/javascript"></script>
+		<script src="static/syntaxhighlighter/scripts/shBrushCss.js" type="text/javascript"></script>
+		<script type="text/javascript">SyntaxHighlighter.all();</script>
+	</head>
+
+	<body>
+		<header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#zmenu_fixed">
+		            <span class="sr-only">切换导航</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		        </button>
+				<a class="dib_vm pl20 pt5" href="#"><img src="images/fanya_logo.png" /></a>
+			</div>
+		</header>
+		<div class="jumbotron">
+			<div class="container">
+				<div class="row">
+					<aside class="col-md-3 col-sm-4" id="zmenu_width">
+						<nav class="zbox collapse navbar-collapse" id="zmenu_fixed">
+							<h3 class="ztitleH zti_h f20 pl15">模块导航</h3>
+							<ul class="list-group">
+								<li class="list-group-item"><a href="#css">样式表概述（css）</a></li>
+								<li class="list-group-item"><a href="#caption">模块标题（caption）</a></li>
+								<li class="list-group-item"><a href="#nav">导航及菜单（nav）</a></li>
+								<li class="list-group-item"><a href="#table">表格（table）</a></li>
+								<li class="list-group-item"><a href="#page">分页（page）</a></li>
+								<li class="list-group-item"><a href="#select">模拟下拉菜单(select)</a></li>
+								<li class="list-group-item"><a href="#checkType">模拟选项(checkType)</a></li>
+								<li class="list-group-item"><a href="#inputTextarea">输入框(inputTextarea)</a></li>
+								<li class="list-group-item"><a href="#button">按钮(button)</a></li>
+								<li class="list-group-item"><a href="#alert">弹层(alert)</a></li>
+							</ul>
+						</nav>
+						可以用分页
+					</aside>
+					<article class="col-md-9 col-sm-8">
+						<section class="panel panel-default" id="css">
+							<header class="panel-heading"><h3 class="panel-title">样式表（css）</h3></header>
+							<div class="panel-body">
+								<h2 class="lead">引用样式表：<code>global.css</code> <code>leftSide.css</code> <code>blue.css</code> <code>common.css</code> <code>cengci.css</code><code>checkboxAndRadio.css</code></h2>
+								<pre class="brush:html;">
+									<link href="css/global.css" type="text/css" rel="stylesheet"> 全局样式表
+                                    <link href="css/common.css" type="text/css" rel="stylesheet"> 公用样式表
+                                    <link href="css/leftSide.css" type="text/css" rel="stylesheet"> 左侧样式表
+                                    <link rel="stylesheet" type="text/css" href="css/checkboxAndRadio.css"/> 模拟选项样式表
+                                    <link href="css/blue.css" type="text/css" rel="stylesheet"> 页面控制颜色的样式表
+                                    <link href="css/cengci.css" type="text/css" rel="stylesheet"> 右侧样式表
+								</pre>
+								<h2 class="lead">字体颜色：</h2>
+								<h2 class="lead">
+									主色：<code>#000</code>
+									说明性文字灰色：<code>#999</code>,<code>grayFont</code>;
+									功能性文字：<code>#4893cc</code>,<code>blueColor</code>;
+									删除类文字：<code>red</code>
+								</h2>
+								<h2 class="lead">字体大小：</h2>
+								<h2 class="lead">
+									常规字号：<code>12px</code>
+									标题字号：<code>14px</code>,<code>font14</code>; <code>16px</code>,<code>font16</code>;
+								</h2>
+							</div>
+						</section>
+						<section class="panel panel-default" id="caption">
+							<header class="panel-heading"><h3 class="panel-title">模块标题（caption）</h3></header>
+							<div class="panel-body">
+								<h2 class="lead">标题样式：</h2>
+								<pre class="brush:css;">
+                                    .title{height:49px;}
+                                    .title i{float:left;width:3px;height:21px;margin-top:14px;margin-right:15px;}
+                                    .titleName{font-size:18px;font-weight:bold;line-height:49px;}
+                                    .tabTitle{height:36px;padding-right:20px}
+                                    .tabTitle li{float:left;height:34px;line-height:34px;margin-right:15px;font-size:16px;padding:0 5px}
+                                    .tabTitle li.cur{font-weight:bold;}
+								</pre>
+								<h2 class="lead">只有一个选项卡html：</h2>
+								<pre class="brush:html;">
+									<div class="title">
+                                        <i></i>
+                                        <span class="titleName">编辑中心</span>
+                                    </div>								
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/caption/ti01.jpg"/>
+								</div>
+                                <h2 class="lead">只有一个选项卡,右侧有内容html：</h2>
+								<pre class="brush:html;">
+									<div class="title">
+                                        <a href="#" class="fr blueBtn">返回</a>
+                                        <a href="#" class="fr blueBtn">添加账号</a>
+                                        <i></i>
+                                        <span class="titleName">修改详情</span>
+                                    </div>							
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/caption/ti04.jpg"/>
+								</div>
+                                <h2 class="lead">多个选项卡html：</h2>
+								<pre class="brush:html;">
+									<div class="tabTitle">
+                                        <ul>
+                                            <li class="cur"><a href="#">学生信息管理</a></li>
+                                            <li><a href="#">学生信息管理</a></li>
+                                            <li><a href="#">学生信息管理</a></li>
+                                        </ul>
+                                    </div>					
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/caption/ti02.jpg"/>
+								</div>
+								<h2 class="lead">右侧添加图标：</h2>
+								<pre class="brush:html;">
+									<div class="tabTitle">
+                                    	<a href="#" class="fr blueBtn"><i class="add">+</i>添加学生卡</a>
+                                        <a href="#" class="fr borderBtn"><i class="eye"></i>查看学籍卡</a>
+                                        <ul>
+                                            <li class="cur"><a href="#">学生信息管理</a></li>
+                                            <li><a href="#">学生信息管理</a></li>
+                                            <li><a href="#">学生信息管理</a></li>
+                                        </ul>
+                                    </div>								
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/caption/ti03.jpg"/>
+								</div>
+								
+							</div>
+						</section>
+						
+						<section class="panel panel-default" id="nav">
+							<header class="panel-heading"><h3 class="panel-title">左侧导航</h3></header>
+							<div class="panel-body">
+                                <h2 class="lead">导航是三级菜单：</h2>
+								<pre class="brush:html;">
+									
+                                    <div class="leftSide fl">
+                                        <a href="#" class="logo"><img src="images/logo.png" width="214" height="49"></a>
+                                        <div class="leftBor">
+                                            <div class="personal">
+                                                <a href="#" class="photo"><img src="images/img.jpg" width="90" height="90"></a>
+                                                <h3><a href="#">王晓红</a></h3>
+                                                <div class="setUp"><a href="#" title="设置" class="sz fl"></a>|<a href="#">退出</a></div>
+                                            </div>
+                                            <ul class="leftNav">
+                                                <li><a href="#"><i class="i01 fl"></i>个人中心<span class="news">99+</span></a></li>
+                                                <li><a href="#"><i class="i02 fl"></i>常用功能</a></li>
+                                                <li><a href="#"><i class="i03 fl"></i>角色权限管理</a></li>
+                                            </ul>
+                                            <div class="menu">
+                                                <ul>
+                                                    <li>
+                                                        <p class="clearfix first"><i class="jichu"></i><a href="#">基础数据管理</a></p>
+                                                        <ul class="secondNav" style="display: none;">
+                                                            <li>
+                                                                <a class="second" href="#">成人教育招生管理</a>
+                                                                <ul class="thirdNav" style="display: none;">
+                                                                    <li>
+                                                                        <a href="#">- 入学考试科目设置</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">- 入学考试成绩管理</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <a class="second" href="#">成人教育招生管理</a>
+                                                                <ul class="thirdNav" style="display: none;">
+                                                                    <li>
+                                                                        <a href="#" class="">- 入学考试科目设置</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">- 入学考试成绩管理</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li> 
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>				
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/nav/dh01.jpg"/>
+								</div>
+							</div>
+						</section>
+                        
+                        <section class="panel panel-default" id="table">
+							<header class="panel-heading"><h3 class="panel-title">表格</h3></header>
+							<div class="panel-body">
+                                <h2 class="lead">列表类表格：</h2>
+								<pre class="brush:html;">
+									<div class="blueTable">
+                                    	<table cellpadding="0" cellspacing="0">
+                                        	<thead>
+                                            	<tr>
+                                                	<th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            	<tr>
+                                                	<td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/table/table01.jpg"/>
+								</div>
+                                <h2 class="lead">编辑类表格：</h2>
+                                <pre class="brush:html">
+                                	<div class="detailOne">
+                                    	<table cellpadding="0" cellspacing="0">
+                                        	<thead>
+                                            	<tr>
+                                                	<th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            	<tr>
+                                                	<td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </pre>
+                                <h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/table/table02.jpg"/>
+								</div>
+							</div>
+						</section>
+                        <section class="panel panel-default" id="page">
+							<header class="panel-heading"><h3 class="panel-title">分页</h3></header>
+							<div class="panel-body">
+								<pre class="brush:html;">
+									<div class="clearfix bottom">
+                                        <p class="BtnAll fl"><input type="checkbox">&nbsp;全选</p>
+                                        <a href="#" class="fl delete">删除</a>
+                                        <div class="pages">
+                                            <span>每页显示：<input type="text" value="10"></span>
+                                            <span class="col6">共有记录25条&nbsp;&nbsp;分2/3页</span>
+                                            <span class="">
+                                                <a href="#">首页</a>
+                                                <a href="#">&lt; 上一页</a>
+                                                <a href="#">下一页 &gt;</a>
+                                                <a href="#">尾页</a>
+                                            </span>
+                                            <span>转到：<input type="text"><input type="submit" value="GO" class="go"></span>
+                                        </div>
+                                    </div>
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/page/page01.jpg"/>
+								</div>
+                                
+							</div>
+						</section>
+                        <section class="panel panel-default" id="select">
+							<header class="panel-heading"><h3 class="panel-title">模拟下拉框</h3></header>
+							<div class="panel-body">
+								<pre class="brush:html;">
+									<div class="selectBox blueBord">
+                                        <p value="0">汉族</p>
+                                        <ul style="display: block;">
+                                            <li value="1"><a href="javascript:void(0)">壮族</a></li>
+                                            <li value="2"><a href="javascript:void(0)">苗族</a></li>
+                                        </ul>
+                                    </div>
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/select/select.jpg"/>
+								</div>
+                                
+							</div>
+						</section>
+                        <section class="panel panel-default" id="checkType">
+							<header class="panel-heading"><h3 class="panel-title">模拟选项</h3></header>
+							<div class="panel-body">
+								<pre class="brush:html;">
+									<div class="zcheckB fl">
+                                        <input class="zcheck_input" onfocus="blur()" type="checkbox" name="" id="classId001" value="">
+                                        <label for="classId001"><em class="zcheck zchecked"><i></i></em></label>
+                                    </div>
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/select/radio.jpg"/>
+								</div>
+                                
+							</div>
+						</section>
+                        <section class="panel panel-default" id="inputTextarea">
+							<header class="panel-heading"><h3 class="panel-title">输入框</h3></header>
+							<div class="panel-body">
+                            	<h2 class="lead">根据输入框长度不同，默认的是86px;相对应的class名字分别是：<code>wid258</code> <code>wid155</code></h2>
+								<pre class="brush:html;">
+									<input type="text" class="wid258" value="1083488731">
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/select/input.jpg"/>
+								</div>
+                                
+							</div>
+						</section>
+                        <section class="panel panel-default" id="button">
+							<header class="panel-heading"><h3 class="panel-title">按钮</h3></header>
+							<div class="panel-body">
+                            	<h2 class="lead">下图按钮的样式分别是：<code>blueBtn</code> <code>screenBtn</code> <code>btn01</code> <code>borderBtn</code></h2>
+								<pre class="brush:html;">
+									<a href="#" class="fr borderBtn">查看变更记录</a>
+                                    <input type="submit" class="screenBtn" value="保存">
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/select/btn.jpg"/>
+								</div>
+                                <h2 class="lead">按钮添加小图标时:</h2>
+                                <pre class="brush:html;">
+									<a href="#" class="fr borderBtn"><i class="eye"></i>查看变更记录</a>
+								</pre>
+                                <h2 class="lead">结果如下所示：</h2>
+                                <div class="zresult">
+									<img class="img-responsive" src="images/select/btn01.jpg"/>
+								</div>
+							</div>
+						</section>
+                        <section class="panel panel-default" id="alert">
+							<header class="panel-heading"><h3 class="panel-title">弹层</h3></header>
+							<div class="panel-body">
+                            	<h2 class="lead">弹层大小可以自动修改</h2>
+								<pre class="brush:html;">
+									<div class="popup" style="width:640px;height:400px">
+                                        <h3><a href="#" class="closed fr"></a>查看学籍卡</h3>
+                                        <div class="popupCon">
+                                            <div class="blueTable ">
+                                                中间内容是随不同的功能改变
+                                            </div>
+                                        </div>
+                                         <div class="bottomBtn">
+                                            <input type="submit" class="blueBtn" value="确认">
+                                            <input type="submit" class="cancel" value="取消">
+                                         </div>
+                                    </div>
+								</pre>
+								<h2 class="lead">结果如下所示：</h2>
+								<div class="zresult">
+									<img class="img-responsive" src="images/alert/alert.jpg"/>
+								</div>
+							</div>
+						</section>
+					</article>
+					</article>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(window).resize(function(){
+				$("#zmenu_fixed").width($("#zmenu_width").width());
+			});
+			$("#zmenu_fixed").width($("#zmenu_width").width());
+			$(window).scroll(function(){
+				var scrollSite=$(document).scrollTop();
+				if(scrollSite>19){
+					$("#zmenu_fixed").addClass("zmenu_fixed");
+					$("#zmenu_fixed").width($("#zmenu_width").width());
+				}else{
+					$("#zmenu_fixed").removeClass("zmenu_fixed");
+				}
+			});
+			
+		</script>		
+	</body>
+
+</html>

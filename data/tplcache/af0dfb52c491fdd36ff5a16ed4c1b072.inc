@@ -1,0 +1,1 @@
+{dede:img text='' width='783' height='777'} /uploads/200713/1-200G3111UB57.jpg {/dede:img}

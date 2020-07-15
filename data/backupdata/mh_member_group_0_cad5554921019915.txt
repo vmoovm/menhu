@@ -1,0 +1,2 @@
+INSERT INTO `mh_member_group` VALUES('1','朋友','0');
+INSERT INTO `mh_member_group` VALUES('2','一个小组','2');

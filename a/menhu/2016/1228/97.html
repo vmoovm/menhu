@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>农产品（食品）检测专业群教学资源库_门户管理</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="" />
+		<link href="/templets/menhu/css/base_test1.css" rel="stylesheet" type="text/css">
+		<link href="/templets/menhu/css/show_v1.3.css" rel="stylesheet" type="text/css" >
+		<link rel="stylesheet" href="/templets/menhu/css/layer.css" id="layui_layer_skinlayercss">
+		<link href="/templets/menhu/css/custom_share_v1.2.css" rel="styleSheet" type="text/css">
+		<script src="/templets/menhu/js/share.js"></script>
+		<script language="javascript" type="text/javascript" src="/include/dedeajax_menhu.js"></script>
+		<script language="javascript" type="text/javascript">
+		<!--
+		function CheckLogin(){
+			  var taget_obj = document.getElementById('_ajax_feedback');
+			  myajax = new DedeAjax(taget_obj,false,false,'','','');
+			  myajax.SendGet2("/member/ajax_feedback.php");
+			  DedeXHTTP = null;
+		}
+		function postBadGood(ftype,fid)
+		{
+			var taget_obj = document.getElementById(ftype+fid);
+			var saveid = GetCookie('badgoodid');
+			if(saveid != null)
+			{
+				var saveids = saveid.split(',');
+				var hasid = false;
+				saveid = '';
+				j = 1;
+				for(i=saveids.length-1;i>=0;i--)
+				{
+					if(saveids[i]==fid && hasid) continue;
+					else {
+						if(saveids[i]==fid && !hasid) hasid = true;
+						saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+						j++;
+						if(j==10 && hasid) break;
+						if(j==9 && !hasid) break;
+					}
+				}
+				if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+				else saveid += ','+fid;
+				SetCookie('badgoodid',saveid,1);
+			}
+			else
+			{
+				SetCookie('badgoodid',fid,1);
+			}
+			myajax = new DedeAjax(taget_obj,false,false,'','','');
+			myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+		}
+		function postDigg(ftype,aid)
+		{
+			var taget_obj = document.getElementById('newdigg');
+			var saveid = GetCookie('diggid');
+			if(saveid != null)
+			{
+				var saveids = saveid.split(',');
+				var hasid = false;
+				saveid = '';
+				j = 1;
+				for(i=saveids.length-1;i>=0;i--)
+				{
+					if(saveids[i]==aid && hasid) continue;
+					else {
+						if(saveids[i]==aid && !hasid) hasid = true;
+						saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+						j++;
+						if(j==20 && hasid) break;
+						if(j==19 && !hasid) break;
+					}
+				}
+				if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+				else saveid += ','+aid;
+				SetCookie('diggid',saveid,1);
+			}
+			else
+			{
+				SetCookie('diggid',aid,1);
+			}
+			myajax = new DedeAjax(taget_obj,false,false,'','','');
+			var url = "/plus/digg_ajax_menhu.php?action="+ftype+"&id="+aid;
+			myajax.SendGet2(url);
+		}
+		function getDigg(aid)
+		{
+			var taget_obj = document.getElementById('newdigg');
+			myajax = new DedeAjax(taget_obj,false,false,'','','');
+			myajax.SendGet2("/plus/digg_ajax_menhu.php?id="+aid);
+			DedeXHTTP = null;
+		}
+		-->
+		</script>
+	</head>
+
+	<body>
+		<style>
+			.headercom {
+				line-height: 39px;
+				font-size: 14px;
+				color: #666;
+				text-align: center;
+				float: left;
+				margin-right: 15px;
+				display: inline;
+				padding-top: 1px;
+			}
+			.headercom:hover {
+				color: #ff9100;
+			}
+			.userxufei:hover {
+				opacity: 0.8;
+			}
+			.top-contact:hover {
+				opacity: 1;
+			}
+		</style>
+		<div class="user-top user-top-a" style="">
+			<div class="w1200 clearfix">
+				<a href="/" target="_blank" class="headercom">首页</a>
+				
+				<a href="/a/jindu/"  target="_blank" class="headercom">项目进度</a>
+				<a class='headercom' style='color:#ff9100;' href='/a/menhu/' >门户定制</a>
+				<a href="/a/mokuai/"  target="_blank" class="headercom">模块</a>
+				
+			</div>
+		</div>
+		<div class="user-top" style="background:#fafafa;margin-bottom:2px;" id="fixed-xuanfu">
+			<div class="w1200 clearfix">
+				<a href="http://888pic.com/" class="logo fl"></a>
+				<form  name="formsearch" action="/plus/search.php">
+				<div class="top-search  fr" style="left: 0px;top: 0px;"><input type="text" id="so-kw" name="q" style="width: 569px;height: 46px;" placeholder="搜单位名称" class="text-search fl" maxlength="30"><input type="submit" value="搜索" class="but-search fl" id="z_searchbtn" style="font-size: 18px;height: 50px;">
+				</div>
+				</form>
+			</div>
+		</div>
+		<div id="main">
+			<div class="bread-nav w1200 clearfix"><i></i>当前位置：<a href='http://www.menhu.com/'>主页</a> > <a href='/a/menhu/'>门户定制</a> > </div>
+			<div class="w1200 clearfix about-pic" style="position: relative;">
+				<h1 class="pic-title">农产品（食品）检测专业群教学资源库</h1>
+				<div style="opacity: 0.4;top: 32px;font-size:12px;font-family: &#39;宋体&#39;;padding-left: 20px;width: 830px;height: 27px;line-height: 27px;color: #fff;background: black;position: absolute;z-index: 2;">备注介绍：D:\项目管理\2014年\psd效果图\学校主页\农产品</div>
+				<div class="left-area fl clearfix">
+					<div class="left-pic fl inspire-height">
+						<div class="big-pic">  <li>
+    <a href='/uploads/161228/7-16122Q62930234.jpg' target='_blank'><img src='/uploads/161228/7-16122Q62930234.jpg'  width='1474'  border='0'/></a>
+    <br />
+    <a href='/uploads/161228/7-16122Q62930234.jpg' target='_blank'></a>
+  </li></div>
+					</div>
+				</div>
+				<div class="right-infor fr">
+					<a href="/uploads/soft/161228/7-16122Q63141.rar
+" target="_blank">
+						<div class="download-but"><i></i>免费下载</div>
+					</a>
+					<a href="/plus/stow.php?aid=97">
+						<div class="collect-but" data-id="27442" data-status="0"><i></i><span class="fl sc-left">收</span>&nbsp;<span class="fl" style="line-height:38px">藏</span></div>
+					</a>
+					<div class="pic-about-num clearfix" id="newdigg">
+						<div class="bad-num clearfix fl" onclick="javascript:postDigg('bad',97)"><i></i><span>0</span></div>
+						<div class="good-num clearfix fl" onclick="javascript:postDigg('good',97)"><i></i><span>0</span></div>
+						<div class="view-num clearfix fl"><i></i><span><script src="/plus/count.php?view=yes&aid=97&mid=7" type='text/javascript' language="javascript"></script></span></div>
+					</div>
+					<div class="pic-infor">
+						<p>前端开发：<span>胥严方,张中乐</span><span style="width: 40px;height: 18px;font-size: 12px;margin-left: 15px;background: #ff6000;color: #fff;line-height: 18px;text-align: center;border-radius: 10px;display: inline-block;">独家</span></p>
+						<p>后端开发：<span></span></p>
+						<p>UI设计师：<span>姚斌</span></p>
+						<p>产品经理：<span>牟翠琳</span></p>
+						<p>色系：<span>绿色</span></p>
+						<p>上传时间：<span>2016-12-28 16:22</span></p>
+					</div>
+					<a target="_blank" href="">
+						<div class="contact">在线预览</div>
+					</a>
+					<div class="share"><span class="fl">分享此图：</span>
+						<div class="bdsharebuttonbox way fl bdshare-button-style1-32" data-bd-bind="1480320994185">
+							<!--<a title="分享到QQ好友" data-cmd="sqq" class="bds_sqq"></a>
+							<a title="分享到微信" data-cmd="weixin" class="bds_weixin"></a>
+							<a title="分享到QQ空间" data-cmd="qzone" class="bds_qzone"></a>
+							<a title="分享到新浪微博" data-cmd="tsina" class="bds_tsina"></a>
+							<a title="分享到花瓣" data-cmd="huaban" class="bds_huaban"></a>-->
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div id="show-top" style="display: none;">
+				<div class="s-t-inner">
+					<a class="s-t-logo fl" href="/"></a><span class="s-t-title">农产品（食品）检测专业群教学资源库</span>
+					<a href="/uploads/soft/161228/7-16122Q63141.rar
+" target="_blank">
+						<div class="s-t-download-but fr"><i></i>免费下载</div>
+					</a>
+				</div>
+			</div>
+			<!--我要这张PPT-->
+			<style>
+				/*** 我要这张PPT ***/
+				
+				.vip-experience-mask, .vip-expire-mask {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 100;
+				}
+				.vip-experience-mask .mask, .vip-expire-mask .mask {
+					width: 100%;
+					height: 100%;
+					background: #000;
+					opacity: 0.2;
+					filter: alpha(opacity=20);
+					zoom: 1;
+				}
+				.experience-box {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin-top: -245px;
+					margin-left: -378px;
+					width: 755px;
+					height: 470px;
+					background-color: #fff;
+					box-shadow: 0 0 5px rgba(6, 0, 1, 0.3)
+				}
+				.mask-top {
+					height: 50px;
+					width: 100%;
+					background: #ff9100;
+					line-height: 50px;
+					color: #fff;
+					font-size: 18px;
+					font-weight: bolder;
+					text-align: center;
+					position: relative;
+					letter-spacing: 3px;
+				}
+				.mask-top span {
+					width: 23px;
+					height: 23px;
+					background: url(images/close-mask.png);
+					display: inline-block;
+					position: absolute;
+					top: 15px;
+					right: 15px;
+					cursor: pointer;
+					transition: all 0.2s;
+					-webkit-transition: all 0.2s;
+					-ms-transition: all 0.2s;
+					-o-transition: all 0.2s;
+					-moz-transition: all 0.2s;
+				}
+				.mask-top span:hover {
+					transform: rotate(180deg);
+					-ms-transform: rotate(180deg);
+					/* IE 9 */
+					-moz-transform: rotate(180deg);
+					/* Firefox */
+					-webkit-transform: rotate(180deg);
+					/* Safari 和 Chrome */
+					-o-transform: rotate(180deg);
+					/* Opera */
+				}
+				.mask-box .congratulate {
+					text-align: center;
+					font-size: 24px;
+					color: #ff9100;
+					padding: 120px 0 110px;
+				}
+				.mask-box .but-link {
+					background-color: #ff9b19;
+					color: #fff;
+					font-weight: bolder;
+					text-align: center;
+					height: 115px;
+					line-height: 115px;
+					width: 450px;
+					margin: 0 auto;
+					font-size: 36px;
+					border-radius: 5px;
+					box-shadow: 1px 1px 2px rgba(6, 0, 1, 0.2);
+					letter-spacing: 5px;
+				}
+				.mask-box .but-link:hover {
+					opacity: 0.9
+				}
+				.expire-box {
+					position: absolute;
+					z-index: 100;
+					bottom: 0px;
+					right: 0px;
+					width: 400px;
+					height: 320px;
+					background-color: #fff;
+					box-shadow: 0 0 3px rgba(150, 142, 137, 0.5)
+				}
+				.expire-box .mask-box .congratulate {
+					font-size: 24px;
+					padding: 50px 0 50px;
+				}
+				.expire-box .mask-box .but-link {
+					font-size: 24px;
+				}
+			</style>
+			<div class="vip-experience-mask" style="display: none;">
+				<div class="mask"></div>
+				<div class="experience-box">
+					<div class="mask-top">VIP会员专享PPT
+						<!--<span class="close-mask"></span>--></div>
+					<div class="mask-box">
+						<p class="congratulate" style="font-size: 30px;line-height: 55px;padding:90px 0 90px;font-weight: 700;letter-spacing: 5px;">只有VIP会员才可免费下载哦！</p>
+						<a href="#" target="_blank" class="tiyanvip">
+							<div class="but-link">我要这张PPT</div>
+						</a>
+					</div>
+				</div>
+			</div><input type="hidden" value="" id="httpReferer"></div>
+		<div class="footer">
+	<div class="foot">
+		<p>若有疑问，请联系QQ:1206762787，我们将尽快处理</p>
+		<p>
+			<a href="#" target="_blank">关于我们</a> - Copyright © 2016 沪ICP备1058741号-7</p>
+			
+			
+	</div>
+</div>
+
+
+
+
+<!--右侧悬浮-->
+
+<div id="fixed">
+	<div class="fixed-but">
+		<a href="javascript:void(0);" class="fankui">给我们点建议吧<i></i></a>
+		<div class="my-browse-but">
+			<i></i>
+			<span>我看过的</span>
+		</div>
+		<!-- <a href="" class="collect-web"><i></i><span>收藏本站</span></a> -->
+		<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=800053584" class="contact-kf">联系客服</a>
+		<div class="back-top" id="gotop"><i></i><span>返回顶部</span></div>
+	</div>
+
+	<div id="browse" class="clearfix">
+		<div class="browse-m clearfix">
+			<div class="browse-bg"></div>
+			<div class="browse">
+				<div class="browse-top">
+					<i class="close-but"></i>
+					<p class="title">我看过的</p>
+					<div class="my-browse">
+						<span></span>个模板
+					</div>
+				</div>
+				<div class="browse-center">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<!--反馈弹窗-->
+<div class="feedback">
+	<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+	<input type="hidden" name="action" value="post">
+	<input type="hidden" name="diyid" value="1">
+	<input type="hidden" name="do" value="2">
+	<div class="mask"></div>
+	<div class="feedback-box">
+		<h2>欢迎您留下对我们网站的宝贵建议！</h2>
+		<textarea name="goodidea" id="goodidea" style="width:90%;height:80" placeholder="您的意见或建议对我们非常宝贵，如经采取，您会领到相应的奖励"></textarea>
+		<div class="Leave-qq"><span>请留下您的QQ</span><input type="text" name="calltype" id="calltype" class="input-text" value="">
+		</div>
+		<div class="Leave-qq"><span>还有验证码</span><input name="validate" type="text" id="vdcode" style="text-transform:uppercase;" size="8"/>    
+		<img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="/include/vdimgck.php"/>    
+		<a href="javascript:vide(-1);" onClick="changeAuthCode();">看不清？ </a>
+		</div>
+		<input type="hidden" name="dede_fields" value="goodidea,multitext;calltype,text">
+		<input type="hidden" name="dede_fieldshash" value="094cd76a70da5fe4a2c6b185809665b2">
+		<div class="sub-but"><input type="submit" name="submit" value="提 交"></div>
+			<div class="sub-but-no">菊花疼，不想交了</div>
+	</div>
+	<div class="feedback-box-over"> 你的声音，我们的动力 感谢您的参与！
+	</div>
+	</form>
+</div>
+<div id="inspire-login-mask" style="width: 100%; height: 100%; opacity: 0.5; position: fixed; z-index: 5; top: 0px; left: 0px; display: none; background: black;"></div>
+
+
+
+<!--登录注册的弹窗暂时没有用着-->
+		<div class="Login">
+			<div class="Login-div">
+				<span class="close-but"></span>
+				<div class="login-title"></div>
+				<dl style="width:195px;">
+					<a href="javascript:;" onclick="toLogin()" id="login"><dt style="margin-left: 10px;"><img class="icon-qq" data-original="http://js.888pic.com/images/com/icon-qq.png"></dt></a>
+					<dd class="login-notice"></dd>
+				</dl>
+			</div>
+		</div>
+
+<script type="text/javascript">
+	// 给我们留言
+			$(".fankui").click(function(){
+				$("#inspire-login-mask").show();
+				$(".feedback").show();
+			});
+			//不想留言了
+			$(".sub-but-no").click(function(){
+				$("#inspire-login-mask").hide();
+				$(".feedback").hide();
+			});
+			//留言的验证码
+			function changeAuthCode() {    
+			
+			   var num =     new Date().getTime();  
+			
+			   var rand = Math.round(Math.random() * 10000);  
+			
+			   num = num + rand;  
+			
+			   $('#ver_code').css('visibility','visible');  
+			
+			   if ($("#vdimgck")[0]) {  
+			
+			       $("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;  
+			
+			   }  
+			
+			   return false;      
+			
+			}  
+			
+			
+</script>
+		<!--右侧悬浮-->
+		<div id="fixed">
+			<div class="fixed-but" style="right: 0px;">
+				<a href="javascript:void(0);" class="fankui">给我们点建议吧<i></i></a>
+				<div class="my-browse-but"><i></i><span>我看过的</span></div>
+				<!-- <a href="" class="collect-web"><i></i><span>收藏本站</span></a> -->
+				<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=800053584" class="contact-kf">联系客服</a>
+				<div class="back-top" id="gotop" style="display: none;"><i></i><span>返回顶部</span></div>
+			</div>
+			<div id="browse" class="clearfix" style="right: -300px;">
+				<div class="browse-m clearfix">
+					<div class="browse-bg"></div>
+					<div class="browse">
+						<div class="browse-top"><i class="close-but"></i>
+							<p class="title">我看过的</p>
+							<div class="my-browse"><span></span>个模板
+							</div>
+						</div>
+						<div class="browse-center"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--反馈弹窗-->
+		<div class="feedback">
+			<div class="mask"></div>
+			<div class="feedback-box">
+				<h2>欢迎您留下对我们网站的宝贵建议！</h2><textarea name="advise-ctx" placeholder="您的意见或建议对我们非常宝贵，如经采取，您会领到相应的奖励"></textarea>
+				<div class="Leave-qq"><span>请留下您的QQ</span><input type="text" name="adviser-qq" class="input-text"></div>
+				<a href="javascript:void(0);">
+					<div class="sub-but">提交</div>
+				</a>
+				<a href="javascript:void(0);">
+					<div class="sub-but-no">菊花疼，不想交了</div>
+				</a>
+			</div>
+			<div class="feedback-box-over"> 你的声音，我们的动力 感谢您的参与！
+			</div>
+		</div>
+		<div id="inspire-login-mask" style="width: 100%; height: 100%; opacity: 0.5; position: fixed; z-index: 5; top: 0px; left: 0px; display: none; background: black;"></div>
+		<!--登录注册的弹窗-->
+		<div class="Login">
+			<div class="Login-div"><span class="close-but"></span>
+				<div class="login-title"></div>
+				<dl style="width:195px;">
+					<a href="javascript:;" onclick="toLogin()" id="login"><dt style="margin-left: 10px;"><img class="icon-qq" data-original="images/icon-qq.png"></dt></a>
+					<dd class="login-notice"></dd>
+				</dl>
+			</div>
+		</div>
+		
+		<script src="/templets/menhu/js/jquery.js" type="text/javascript"></script>
+		<script src="/templets/menhu/js/base_v3.29.js" type="text/javascript"></script>
+		<script src="/templets/menhu/js/layer.js" type="text/javascript"></script>
+		<script>
+			$(function() {
+
+
+
+				$(window).scroll(function() {
+					if($(document).scrollTop() > 270) {
+						$("#show-top").css({
+							display: "block"
+						});
+					} else {
+						$("#show-top").css({
+							display: "none"
+						});
+					}
+				});
+
+
+
+			});
+		</script>
+		
+	</body>
+
+</html>

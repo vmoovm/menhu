@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+		<meta name="keywords" content="{dede:field name='keywords'/}">
+		<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/base_test1.css">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/index_v1.2.css">
+	</head>
+
+	<body>
+		<style>
+			.headercom {
+				line-height: 39px;
+				font-size: 14px;
+				color: #666;
+				text-align: center;
+				/*float: left;*/
+				margin-right: 15px;
+				display: inline;
+				padding-top: 1px;
+			}
+			.headercom:hover {
+				color: #ff9100;
+			}
+			.userxufei:hover {
+				opacity: 0.8;
+			}
+			.top-contact:hover {
+				opacity: 1;
+			}
+		</style>
+		<div class="user-top user-top-a">
+			<div class="w1200 clearfix">
+				<a class="fr headercom" target="_blank" href="/admin">后台管理</a>
+			</div>
+		</div>
+		<div class="user-top" style="background:#fafafa;margin-bottom:2px;">
+			<div class="w1200 clearfix">
+				<a href="#" class="logo fl"></a>
+				<ul class="fr top-classfiy">
+					<li class="fl">
+						<a href="{dede:global.cfg_cmsurl/}/" target="_blank" id="on_current" class="yclNew">首页</a>
+					</li>
+					{dede:channel type='top' row='10' currentstyle="<li class='fl'><a class='ycl' id='on_current' href='~typelink~' ~rel~><span>~typename~</span></a></li>"}
+					<li class="fl">
+						<a href='[field:typeurl/]' [field:rel/] target="_blank" class="ycl">[field:typename/]</a>
+					</li>
+					{/dede:channel}
+				</ul>
+			</div>
+		</div>
+		<form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+		<div class="user-search">
+			<div class="w1200">
+				<div class="top-search  fr"><input type="text" name="q" id="so-kw" style="width: 569px;height: 46px;" placeholder="搜公司名称" class="text-search fl" maxlength="30"/><input type="submit" value="搜索" class="but-search fl" id="z_searchbtn" style="height: 50px;font-size: 18px;"/></div>
+			</div>
+		</div>
+		</form>
+		<div id="main">
+			<div class="supporter">
+			<p class="supporter-title">Web前端团队</p>
+			</div>
+			<div class="w1200 clearfix">
+				<div class="all-label clearfix">
+					<div class="all-function fl">
+						<div class="title-function clearfix "><img src="{dede:global.cfg_templets_skin/}/temp/xuyanfang.jpg"/><span>胥严方</span></div>
+						<p>前端工程师，技术先进，工作效率</p>
+					</div>
+					<div class="all-function fl">
+						<div class="title-function clearfix "><img src="{dede:global.cfg_templets_skin/}/temp/sunlili.jpg"/><span>孙利利</span></div>
+						<p>前端工程师，资历深，经验丰富</p></div>
+					<div class="all-function fl">
+						<div class="title-function clearfix "><img src="{dede:global.cfg_templets_skin/}/temp/qianjunjie.jpg"/><span>钱俊杰</span></div>
+						<p>前端工程师，技术过硬，圈里佼佼者</p></div>
+					<div class="all-function fl" style="margin-right: 0;">
+						<div class="title-function clearfix "><img src="{dede:global.cfg_templets_skin/}/temp/zhangzhongle.jpg"/><span>张中乐</span></div>
+						<p>前端工程师，综合技能强。</p>
+					</div>
+				</div>
+			</div>
+			<div class="w1200 clearfix wrapper">
+				<div class="wrapper-title" id="fine">
+					<a href="{dede:field name='typeurl'/}" class="current">我们的作品<i></i></a>
+				</div>
+				<div class="content-index clearfix data-list">
+					{dede:arclist addfields='htmlfile' titlelen='60' row='16' channelid='17' typeid="4" }
+					<div class="img-show fl">
+						<div class="img">
+							<a href="[field:arcurl /]" target="_blank"><img class="lazy" alt="[field:title function='html2text(@me)'/]" src="[field:picname /]"/></a>
+						</div>
+						<div class="img-pos">
+							<a href="[field:htmlfile /]" target="_blank">
+								<div class="free-download"><i></i><span>免费下载</span></div>
+							</a>
+							<div class="img-opacity"></div>
+							<a href="[field:arcurl /]" target="_blank">
+								<div class="img-but" target="_blank">
+									<p>[field:title /]</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					{/dede:arclist}
+				</div>
+				<a href="javascript:void(0)" class="more" id="more" page="1" type="1">加载更多</a>
+			</div>
+			
+		</div>
+		
+		
+		<script src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+		{dede:include filename="footer.htm"/}
+		<script src="{dede:global.cfg_templets_skin/}/js/base_v3.29.js"></script>
+		
+		<script type="text/javascript">
+			
+			// 首页异步加载列表
+			var loadConfig = {
+				url_api:'/plus/list.php',
+				typeid:{dede:field name="typeid"/},
+				page:2,
+				pagesize:16,
+				loading : 0,
+			}
+			//console.log(loadConfig.url_api);
+			function  loadMoreApply(){
+				if(loadConfig.loading == 0){
+					 var typeid = loadConfig.typeid;
+					 var page = loadConfig.page;
+					 var pagesize = loadConfig.pagesize;
+					 var url = loadConfig.url_api,
+					 data={
+					 	ajax:'pullload',
+					 	typeid:typeid,
+					 	page:page,
+					 	pagesize:pagesize
+					 };
+			         // var sTop = document.body.scrollTop || document.documentElement.scrollTop, 
+			         // dHeight = $(document).height(), 
+			         // cHeight = document.documentElement.clientHeight;
+			         // if (sTop + cHeight >= dHeight - cHeight) {
+						 loadConfig.loading = 1;
+						function ajax(url, data) {
+							$.ajax({
+								url: url,
+								data: data,
+								async: false,
+								type: 'GET',
+								dataType: 'json',
+								success: function(data) {
+									console.log(data);
+									addContent(data);
+								}
+							});
+							
+						}
+						ajax(url,data);
+					
+					// }
+				}
+			}
+			 function addContent (rs){
+				if(rs.statu== 1){
+					var data = rs.list;
+					var total = rs.total;
+					var arr=[];
+					var length = data.length;
+					console.log(length)
+					for(var i=0;i<length;i++){
+						
+						arr.push('<div class="img-show fl">');
+						arr.push('<div class="img">');
+						arr.push('<a href="'+data[i].arcurl+'" target="_blank"><img class="lazy" alt="'+data[i].title+'" width="380" height="572" src="'+data[i].picname+'"/></a>');
+						arr.push('</div>');
+						arr.push('<div class="img-pos">');
+						arr.push('<a href="'+data[i].htmlfile+'" target="_blank">');
+						arr.push('<div class="free-download"><i></i><span>免费下载</span></div>');
+						arr.push('</a>');
+						arr.push('<div class="img-opacity"></div>');
+						arr.push('<a href="'+data[i].arcurl+'" target="_blank">');
+						arr.push('<div class="img-but" target="_blank">');
+						arr.push('<p>'+data[i].title+'</p>');
+						arr.push('</div>');
+						arr.push('</a>');
+						arr.push('</div>');
+						arr.push('</div>');
+					}
+					$('.data-list').append(arr.join(''));
+				
+					loadConfig.load_num = rs.load_num;
+					if(total<loadConfig.page*loadConfig.pagesize || loadConfig.page > loadConfig.load_num){
+						// window.removeEventListener('srcoll',loadMoreApply,false);
+						document.getElementById("more").removeEventListener('click', loadMoreApply, false);
+						document.getElementById("more").innerText="没有更多了"
+						document.getElementById("more").setAttribute("class","more more_over")
+					}
+					loadConfig.page++;
+					loadConfig.loading = 0;
+					
+				}
+			}
+			function pullLoad(){
+				// window.addEventListener('scroll', loadMoreApply, false);
+				document.getElementById("more").addEventListener('click', loadMoreApply, false);
+			}
+			pullLoad()
+			//checkMobile();
+		
+		</script>
+		
+		
+		<!--登录start-->
+		
+		<div class="header_top" style="display: none;"> 
+			<div class="w960 center"> 
+				<span class="time" id="time"> 
+					<table border="0" align="center" > 
+					<tr><td> 
+					<div id="_userlogin"> 
+						<div class="userlogin"> 
+							<form name="userlogin" action="{dede:global.cfg_memberurl/}/index_do.php" method="POST"> 
+								<input type="hidden" name="fmdo" value="login" /> 
+								<input type="hidden" name="dopost" value="login" /> 
+								<input type="hidden" name="keeptime" value="604800" /> 
+								<div class="fb">用户名:<input type="text" name="userid" size="18" class="ipt-txt" /> 
+								密码:<input type="password" name="pwd" size="18" class="ipt-txt" /> 
+								验证码:<input type="text" name="vdcode" size="8" class="ipt-txt" /> 
+								<img align="center" src="{dede:global.cfg_cmsurl/}/include/vdimgck.php" /> 
+								<button type="submit" class="btn-1">登录</button> 
+								<a href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew">注册帐号</a> <a href="{dede:global.cfg_memberurl/}/resetpassword.php">忘记密码?</a>
+								</div>
+							</form> 
+						</div> 
+					</div> 
+					<!-- /userlogin --> 
+					<!--<script language="javascript" type="text/javascript">CheckLogin();</script>--> 
+					</td></tr>
+					</table> 
+				</span> 
+				<div class="toplinks"><a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{dede:global.cfg_basehost/}');">设为首页</a> | <a href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')">加入收藏</a> | <a href="{dede:global.cfg_cmsurl/}/data/sitemap.html" target="_blank">网站导航</a> | <a href="http://www.jb51.net">联系我们</a></div> 
+			</div> 
+		</div>
+		
+		<style type="text/css">
+			/*---------- head ---------*/ 
+			.header{ 
+			width:100%; 
+			width:960px; 
+			margin:auto; 
+			overflow:hidden; 
+			} 
+			.header_top{ 
+			height:32px!important; 
+			height:31px; 
+			line-height:32px; 
+			color:#676767; 
+			overflow:hidden; 
+			background:#ccc; 
+			} 
+			.center{ 
+			margin:0px auto; 
+			} 
+			.w960{ 
+			width:960px; 
+			/*position:relative;*/ 
+			} 
+			.header_top .time{ 
+			float:left; 
+			padding-left:10px; 
+			} 
+			.header_top .toplinks{ 
+			float:right; 
+			text-align:right; 
+			} 
+			.header_top .toplinks a{ 
+			margin:0 5px; 
+			} 
+			.header .top{ 
+			clear:both; 
+			overflow:hidden; 
+			margin-top:10px; 
+			} 
+			.header .title{ 
+			float:left; 
+			} 
+			.header .title h1 a{ 
+			width:386px; 
+			height:58px; 
+			display:block; 
+			overflow:hidden; 
+			} 
+			.header .banner{ 
+			width:434px; 
+			height:55px; 
+			float:right; 
+			margin-left:20px; 
+			overflow:hidden; 
+			} 
+			.ipt-txt{ 
+			width:100px; 
+			border:1px #CFCFCF solid; 
+			} 
+			.fb{ 
+			color:#333333; 
+			} 
+			.btn-1{ 
+			/*background: url("../images/comm-bt.gif") no-repeat scroll 0 0 transparent;*/ 
+			background: #dedede;
+			border: medium none; 
+			color: #585858; 
+			cursor: pointer; 
+			height: 24px; 
+			letter-spacing: 1px; 
+			line-height: 25px; 
+			overflow: hidden; 
+			width: 70px; 
+			} 
+		</style>
+		
+		<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script> 
+		<script language="javascript" type="text/javascript"> 
+		<!-- 
+		$(function(){ 
+		$("a[_for]").mouseover(function(){ 
+		$(this).parents().children("a[_for]").removeClass("thisclass").parents().children("dd").hide(); 
+		$(this).addClass("thisclass").blur(); 
+		$("#"+$(this).attr("_for")).show(); 
+		}); 
+		$("a[_for=uc_member]").mouseover(); 
+		$("a[_for=flink_1]").mouseover(); 
+		}); 
+		function CheckLogin(){ 
+		var taget_obj = document.getElementById('_userlogin'); 
+		myajax = new DedeAjax(taget_obj,false,false,'','',''); 
+		myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php"); 
+		DedeXHTTP = null; 
+		} 
+		--> 
+		</script> 
+		<!--登录end-->
+		<!--<style type="text/css">
+			.zopacity { position: fixed; width: 100%; height: 100px; background: #000; left: 0; bottom: 0; display: none;}
+		</style>
+		<div class="zopacity" id="zopacity">
+</div>
+		<iframe src="{dede:global.cfg_templets_skin/}/search2.htm" width="" height=""></iframe>-->
+	</body>
+
+</html>

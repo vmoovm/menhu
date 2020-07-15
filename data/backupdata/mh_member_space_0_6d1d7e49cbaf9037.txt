@@ -1,0 +1,7 @@
+INSERT INTO `mh_member_space` VALUES('1','10','0','admin的空间','','person','','');
+INSERT INTO `mh_member_space` VALUES('2','10','0','前端的空间','','person','','');
+INSERT INTO `mh_member_space` VALUES('3','10','0','yanfang的空间','','person','','');
+INSERT INTO `mh_member_space` VALUES('4','10','0','胥严方的空间','','person','','');
+INSERT INTO `mh_member_space` VALUES('5','10','0','孙利利的空间','','person','','');
+INSERT INTO `mh_member_space` VALUES('6','10','0','钱俊杰的空间','','person','','');
+INSERT INTO `mh_member_space` VALUES('7','10','0','张中乐的空间','','person','','');

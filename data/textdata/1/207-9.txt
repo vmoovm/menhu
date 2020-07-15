@@ -1,0 +1,184 @@
+<div>
+	&lt;?php</div>
+<div>
+	if(!isset($GLOBALS[&#39;_vars&#39;])) $GLOBALS[&#39;_vars&#39;] = array();&nbsp;</div>
+<div>
+	$fields = array();</div>
+<div>
+	?&gt;</div>
+<div>
+	&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</div>
+<div>
+	&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;</div>
+<div>
+	&lt;head&gt;</div>
+<div>
+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=&lt;?php echo $cfg_soft_lang; ?&gt;&quot;&gt;</div>
+<div>
+	&lt;title&gt;广告管理&lt;/title&gt;</div>
+<div>
+	&lt;link href=&quot;css/base.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</div>
+<div>
+	&lt;/head&gt;</div>
+<div>
+	&lt;body background=&quot;images/allbg.gif&quot; leftmargin=&quot;8&quot; topmargin=&#39;8&#39;&gt;</div>
+<div>
+	&lt;table width=&quot;98%&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#D6D6D6&quot;&gt;</div>
+<div>
+	&nbsp; &lt;tr&gt;</div>
+<div>
+	&nbsp; &nbsp; &lt;td height=&quot;28&quot; background=&quot;images/tbg.gif&quot; colspan=&quot;7&quot; style=&quot;padding-left:10px;&quot;&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;b&gt;&lt;a href=&quot;ad_main.php&quot;&gt;广告管理&lt;/a&gt;&lt;/b&gt;&amp;nbsp;[&lt;a href=&quot;ad_add.php&quot;&gt;&lt;u&gt;增加一个新广告&lt;/u&gt;&lt;/a&gt;]</div>
+<div>
+	&nbsp; &nbsp; [&lt;a href=&quot;adtype_main.php&quot;&gt;&lt;u&gt;广告分类管理&lt;/u&gt;&lt;/a&gt;]&lt;/td&gt;</div>
+<div>
+	&lt;/tr&gt;</div>
+<div>
+	&nbsp; &lt;tr&gt;</div>
+<div>
+	&nbsp; &nbsp; &lt;td height=&quot;28&quot; colspan=&quot;7&quot; style=&quot;padding-left:10px;&quot; bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &lt;form action=&#39;ad_main.php&#39; method=&#39;get&#39; name=&#39;form3&#39; id=&quot;form3&quot;&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&#39;hidden&#39; name=&#39;dopost&#39; value=&#39;listArchives&#39; /&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;&lt;table width=&#39;600&#39; border=&#39;0&#39; cellpadding=&#39;0&#39; cellspacing=&#39;0&#39;&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td width=&#39;90&#39; align=&#39;center&#39;&gt;请选择分类：&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td width=&#39;124&#39;&gt;&lt;select name=&#39;clsid&#39; style=&#39;width:150&#39; id=&quot;clsid&quot;&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&#39;0&#39;&gt;默认分类...&lt;/option&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="white-space:pre"> </span>&lt;?php echo $option;?&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td width=&#39;71&#39;&gt; 关键字： &lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td width=&#39;185&#39;&gt;&lt;input type=&#39;text&#39; name=&#39;keyword&#39; style=&#39;width:150&#39; /&gt;&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td width=&quot;130&quot;&gt;&lt;input name=&quot;imageField&quot; type=&quot;image&quot; src=&quot;images/button_search.gif&quot; width=&quot;60&quot; height=&quot;22&quot; border=&quot;0&quot; class=&quot;np&quot; /&gt;&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/table&gt;&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+<div>
+	&nbsp; &nbsp; &lt;/table&gt;&lt;/td&gt;</div>
+<div>
+	&nbsp; &lt;/tr&gt;</div>
+<div>
+	&nbsp; &lt;tr align=&quot;center&quot;&nbsp; bgcolor=&quot;#FBFCE2&quot;&quot; height=&quot;24&quot;&gt;&nbsp;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;td width=&quot;8%&quot;&gt;编号&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;td width=&quot;20%&quot;&gt;分类&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;td width=&quot;20%&quot;&gt;广告名称&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;td width=&quot;12%&quot;&gt;投放范围&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;td width=&quot;11%&quot;&gt;是否限时&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;td width=&quot;11%&quot;&gt;结束时间&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;td width=&quot;18%&quot;&gt;管理&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp;&lt;/tr&gt;</div>
+<div>
+	&nbsp; &nbsp;</div>
+<div>
+	&nbsp; &nbsp;&lt;?php</div>
+<div>
+	$atts = array();</div>
+<div>
+	$atts[&#39;tagname&#39;] = &#39;datalist&#39;;</div>
+<div>
+	$blockValue = $this-&gt;refObj-&gt;GetArcList($atts,$this-&gt;refObj,$fields);&nbsp;</div>
+<div>
+	if(is_array($blockValue)){</div>
+<div>
+	foreach( $blockValue as $key=&gt;$fields )</div>
+<div>
+	{</div>
+<div>
+	?&gt;</div>
+<div>
+	&nbsp; &nbsp; &lt;tr align=&quot;center&quot; bgcolor=&quot;#FFFFFF&quot; height=&quot;24&quot; onMouseMove=&quot;javascript:this.bgColor=&#39;#FCFDEE&#39;;&quot; onMouseOut=&quot;javascript:this.bgColor=&#39;#FFFFFF&#39;;&quot;&gt;&nbsp;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;&lt;?php echo $fields[&#39;aid&#39;]; ?&gt;&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;&lt;?php echo TestType($fields[&#39;clsname&#39;],1); ?&gt;&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;&lt;?php echo $fields[&#39;adname&#39;]; ?&gt;&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;&lt;?php echo TestType($fields[&#39;typename&#39;]); ?&gt;&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;&lt;?php echo TimeSetValue($fields[&#39;timeset&#39;]); ?&gt;&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;&lt;?php echo GetDateMk($fields[&#39;endtime&#39;]); ?&gt;&lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;a href=&#39;ad_edit.php?aid=&lt;?php echo $fields[&#39;aid&#39;]; ?&gt;&amp;dopost=gettag&#39;&gt;[代码]&lt;/a&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;a href=&#39;ad_edit.php?aid=&lt;?php echo $fields[&#39;aid&#39;]; ?&gt;&amp;dopost=edit&#39;&gt;[更改]&lt;/a&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp;&lt;a href=&#39;ad_edit.php?aid=&lt;?php echo $fields[&#39;aid&#39;]; ?&gt;&amp;dopost=delete&#39;&gt;[删除]&lt;/a&gt;</div>
+<div>
+	&nbsp; &nbsp; &lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp;&lt;/tr&gt;</div>
+<div>
+	&lt;?php</div>
+<div>
+	}</div>
+<div>
+	}?&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp;&lt;tr align=&quot;center&quot; bgcolor=&quot;#F9FCEF&quot; height=&quot;24&quot;&gt;&nbsp;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;td colspan=&quot;7&quot;&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; <span style="white-space:pre"> </span>&lt;?php</div>
+<div>
+	$atts = array();</div>
+<div>
+	$atts[&#39;tagname&#39;] = &#39;pagelist&#39;;</div>
+<div>
+	$atts[&#39;listsize&#39;] = &#39;5&#39;;</div>
+<div>
+	&nbsp;echo $this-&gt;refObj-&gt;GetPageList($atts,$this-&gt;refObj,$fields);&nbsp;</div>
+<div>
+	?&gt;</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &lt;/td&gt;</div>
+<div>
+	&nbsp; &nbsp; &nbsp;&lt;/tr&gt;</div>
+<div>
+	&nbsp; &nbsp;&lt;/table&gt;</div>
+<div>
+	&nbsp; &nbsp;&lt;/td&gt;</div>
+<div>
+	&lt;/tr&gt;</div>
+<div>
+	&lt;/table&gt;</div>
+<div>
+	&lt;/body&gt;</div>
+<div>
+	&lt;/html&gt;</div>

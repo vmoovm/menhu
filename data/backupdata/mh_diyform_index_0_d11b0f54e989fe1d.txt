@@ -1,0 +1,7 @@
+INSERT INTO `mh_diyform_index` VALUES('1','0','好的建议不留名','1206762787');
+INSERT INTO `mh_diyform_index` VALUES('2','0','欢迎您留下对我们网站的宝贵建议！','1574');
+INSERT INTO `mh_diyform_index` VALUES('3','0','欢迎您留下对我们网站的宝贵建议！','在大规模 地');
+INSERT INTO `mh_diyform_index` VALUES('4','0','龙井茶','肝夺村');
+INSERT INTO `mh_diyform_index` VALUES('5','0','','');
+INSERT INTO `mh_diyform_index` VALUES('6','0','afsdl;kkfsdakjlkdjsaf;lkdsafdsafdsafdfasdfasdasfdfas','dsfaadfsasdfdasf');
+INSERT INTO `mh_diyform_index` VALUES('7','0','','载');

@@ -1,0 +1,182 @@
+﻿@charset "utf-8";
+
+/*********** 本css针对于详情页 2016-07-04  ***************/
+
+.bread-nav{ color: #b8b8b8; font-size:12px; height: 20px; line-height: 20px; margin-bottom: 12px; margin-top:10px;}
+.bread-nav a{color:#b8b8b8}
+.bread-nav a.back { color: #ff9100;}
+.bread-nav i{ display: inline-block; width:8px; height: 14px; background: url(http://js.888pic.com/images/com/icon-public.png) 0 -61px ; float: left; margin-top: 3px;margin-right: 5px; }
+
+.about-pic{ margin-bottom: 75px; }
+.about-pic .pic-title{ color: #4e4e4e; font-size: 16px; margin-bottom: 10px;}
+.reslut-pic .pic-title{ color: #6e6e6e; font-size:16px; height: 26px; line-height:22px; text-overflow: ellipsis; overflow: hidden; word-wrap: break-word; }
+.left-pic{ border:#eeeded 1px solid; padding: 20px 30px;  background-color: #fff; position: relative; }
+.left-pic .big-pic{ text-align: center; }
+.left-pic .big-pic img{ width: 100%; height:auto; }
+.share{margin-top:20px;}
+.share span {font-size: 14px;height: 42px;line-height: 42px;display:inline-block;}
+
+
+/*****  右侧图片信息********/
+.right-infor{ width: 240px; border:#eeeded 1px solid; padding:27px 39px 75px 39px; background-color: #fff; }
+.right-infor .download-but{ display: inline-block; width: 100%; height: 67px;line-height: 67px; background-color: #ff9408; color: #fff; font-size: 22px;box-shadow: 1px 1px 2px rgba(6,0,1,0.2)}
+.right-infor .download-but:hover{ background-color: #e78300 }
+.right-infor .download-but i{ display: inline-block;width: 18px; height: 23px; background: url(http://js.888pic.com/images/com/icon-public.png) 0 -16px; float: left;margin: 22px 15px 22px 55px; }
+
+.right-infor .collect-but{ display: inline-block;  width: 238px; height: 40px; line-height: 40px;  border: #ff9100 1px solid; color: #ff9100; font-size:18px ; margin-top: 13px; margin-bottom:20px}
+.right-infor .collect-but i{ display: inline-block; width: 19px; height: 19px;  background: url(http://js.888pic.com/images/com/icon-public.png) 0 -77px;  float: left;margin: 11px 15px 22px 73px;}
+.right-infor .collect-but:hover{ background-color: #ff9100; color: #fff; }
+.right-infor .collect-but:hover i{ background-position: -22px -77px; }
+
+.right-infor .pic-about-num{ border-bottom: #efefef 1px solid; color: #a2a2a2;width:280px;}
+.right-infor .download-num, .right-infor .collect-num, .right-infor .view-num ,.good-num ,.bad-num{height: 20px;line-height: 20px;margin-right: 25px;padding: 12px 0;}
+
+.right-infor .download-num i{ display: inline-block;  float: left;width: 9px; height: 12px;  background: url(../images/icon-public.png) -13px -45px; margin:3px 10px 3px 5px;  }
+.right-infor .collect-num i{ display: inline-block;  float: left;width: 13px; height: 13px;  background: url(http://js.888pic.com/images/com/icon-public.png) -12px -60px; margin:2px 10px 3px 5px; }
+.right-infor .view-num i {background: rgba(0, 0, 0, 0) url("http://js.888pic.com/images/com/icon-public.png") repeat scroll -31px -60px;display: inline-block;float: left;height: 14px;margin: 2px 10px 3px 5px;width: 17px;}
+.right-infor .good-num i{ display: inline-block;  float: left;width: 14px; height: 14px;  background: url(../images/icon-public.png) -2px -105px; margin:2px 10px 3px 5px; }
+.right-infor .bad-num i{ display: inline-block;  float: left;width: 14px; height: 14px;  background: url(../images/icon-public.png) -17px -105px; margin:2px 10px 3px 5px; }
+
+.right-infor  .pic-infor{ padding: 20px 0 }
+.right-infor  .pic-infor p{ height:24px; line-height: 24px;  font-size: 14px; color: #5e5e5e; margin-bottom: 20px; }
+.right-infor  .contact{ width: 100%;  background-color: #f0e3d2; height: 40px; line-height: 40px; text-align: center; color: #767676; box-shadow: 1px 1px 2px rgba(6,0,1,0.2) ; font-size: 16px}
+
+
+
+/*** 顶部悬浮下载按钮+版权声明20160825 ****/
+.left-area{width:850px;}
+.copyright-notice{width:848px;height:90px;border: 1px solid #eeeded;margin-top:10px;background-color:#fff;font-family:"simsun";}
+.copyright-notice p{color: #333;margin: 18px auto 0;width: 700px;line-height:26px;font-size:13px;}
+#show-top{background:#FAFAFA;box-shadow: 0 2px 2px rgba(6, 0, 1, 0.2);display: none;height: 80px;min-width: 1200px;position: fixed;
+top: 0;transition: all 0.2s ease 0s;width: 100%;z-index:3;border-bottom: 1px #eee solid;}
+.s-t-inner{height: 80px;margin: 0 auto;width: 1200px;}
+.s-t-inner .s-t-logo {background: url("../images/logo.png") no-repeat -50px 0;height: 41px;margin-right: 65px;margin-top: 20px;transition: none 0s ease 0s ;width: 121px;display:block;}
+.s-t-inner .s-t-title{height:80px;line-height:80px;width:580px;color:#333;overflow: hidden;font-size:16px;}
+.s-t-inner .s-t-download-but{border-radius:1px;position:relative;margin-top:15px;margin-right:110px;width:152px;height:54px;line-height:54px;font-size:22px;box-shadow: 1px 1px 2px rgba(6, 0, 1, 0.2);color: #fff;background-color:#ff9100;padding-left:90px;}
+.s-t-inner .s-t-download-but:hover{background-color:#eb8400;}
+.s-t-inner .s-t-download-but i {position:absolute;background: url("http://js.888pic.com/images/com/icon-public.png") no-repeat 0 -16px;display: block;height: 23px;top:17px;left:56px;width: 18px;}
+
+.article-title { border-bottom: none; font-size: 20px; line-height: 2; padding-bottom: 10px; color: #222; font-weight: bold;}
+.zmokuai {padding: 10px 30px 20px; background: #fff;}
+.zmokuai-title { padding-bottom: 10px; line-height: 2; font-size: 30px; color: #333;}
+.zmokuai-header { position: relative; padding: 6px 10px; padding-left: 60px; background: #f8f8f8; border-radius: 5px;
+	
+}
+.zmokuai-type { position: absolute; left: 0; top: 0; width: 54px; height: 30px; border-radius: 5px; background: #fec479;
+
+	-webkit-transform-origin: 0% 50%;
+	-webkit-transform: perspective(50px) rotateY(19deg);
+}
+.zmokuai-type p { position: absolute; left: 0; top: 0; width: 54px; height: 30px; line-height: 30px; padding-left: 8px; color: #fff; font-size: 16px; }
+.zmokuai-info { line-height: 2; font-size: 13px;}
+.zmokuai-info span { margin-right: 6px;}
+.zmokuai-info .zname { padding-right: 8px; color: #ff9100;}
+.zmokuai-info .ztime { padding-right: 8px; color: #999;}
+.zmokuai-info .zview { padding-right: 8px; padding-left: 24px; color: #999; background: url(../images/rateofflow.png) left center no-repeat;}
+.zmokuai-info .zcollection { padding-right: 8px; padding-left: 24px; color: #999; background: url(../images/favorites.png) left center no-repeat;}
+.zmokuai-tags {}
+.zmokuai-tags span { display: inline-block; margin-left: 6px; padding-left: 4px; padding-right: 4px; border: 1px #ebebeb solid; border-radius: 4px; background: #fff; color: #ff9100; line-height: 18px; font-size: 12px;}
+/* CODE
+=============================================================================*/
+.module { padding: 20px; padding-bottom: 30px;}
+.module h2 { border-bottom: none; line-height: 2; color: #222;}
+
+.module pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+.module pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.module pre code, .module pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+.module kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+.module blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+.module blockquote>:first-child {
+  margin-top: 0px;
+}
+
+.module blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+.module hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+.module table th {
+  font-weight: bold;
+}
+
+.module table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+.module table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.module table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+.module img {
+  max-width: 100%
+}

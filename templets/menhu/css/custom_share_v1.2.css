@@ -1,0 +1,7 @@
+.way{ display:inline-block;width:145px; height:28px; margin-top: 7px;}
+.way a{ display:inline-block; width:25px; height:22px; line-height:22px; margin-right:0; transition:none; padding:3px 0;cursor:pointer}
+.way .bds_sqq{ background:url(../images/icon-share.png) no-repeat -3px -21px}
+.way .bds_weixin{ background:url(../images/icon-share.png) no-repeat -27px -21px}
+.way .bds_qzone{ background:url(../images/icon-share.png) no-repeat -51px -21px}
+.way .bds_tsina{ background:url(../images/icon-share.png) no-repeat -74px -21px}
+.way .bds_huaban{ background: url(../images/icon-share.png) no-repeat -129px -22px}

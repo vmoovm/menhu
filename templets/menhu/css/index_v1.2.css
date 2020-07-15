@@ -1,0 +1,47 @@
+
+@charset "utf-8";
+
+
+/*********** 本css针对于首页样式 2016-07-04  ***************/
+
+
+
+
+/*****更新与推荐******/
+.wrapper-title{ width:100%; height: 40px;box-shadow: 0 0 3px rgba(6,0,1,0.2); margin-bottom: 40px; }
+.wrapper-title a{ display: inline-block; width: 100%; text-align: center; line-height: 40px; color: #5d5d5d; font-size: 16px; position:relative;}
+.wrapper-title a i{ position:absolute;top:40px;left: 50%; margin-left: -13px; display: inline-block; width: 25px; height: 10px; background: url(../images/icon-public.png) 0 0 ; display: none;  transition: all 0.2s;-webkit-transition: all .2s;}
+.wrapper-title .current{ background-color: #ff9100; color:#fff; }
+.wrapper-title .current i{ display: block; }
+/*.wrapper-title{ width:100%; height: 40px;box-shadow: 0 0 3px rgba(6,0,1,0.2); margin-bottom: 40px; }
+.wrapper-title a{ display: inline-block; width: 50%; text-align: center; line-height: 40px; color: #5d5d5d; font-size: 16px; position:relative;}
+.wrapper-title a i{ position:absolute;top:40px;left: 50%; margin-left: -13px; display: inline-block; width: 25px; height: 10px; background: url(http://js.888pic.com/images/com/icon-public.png) 0 0 ; display: none;  transition: all 0.2s;-webkit-transition: all .2s;}
+.wrapper-title .current,.wrapper-title a:hover{ background-color: #ff9100; color:#fff; }
+.wrapper-title .current i{ display: block; }
+.wrapper-title a:hover i{ display: block; }*/
+
+
+/**** 全站功能 ****/
+.all-label{ margin-right: -80px; margin-bottom:80px;}
+.all-label a{display: inline-block;}
+.all-function {  width:240px; margin-right:80px; }
+.all-function  .title-function{ height: 50px; line-height:50px; margin-bottom:15px; }
+.all-function span{ color: #454545; font-size: 20px; float: left; }
+.all-function  p{ color: #828282 }
+.all-function img { float: left; width: 50px; height: 50px; margin-right: 18px; border-radius: 50%;}
+
+/***** TA们都在用 ****/
+.supporter{margin-bottom:65px;padding-top:27px;}
+.supporter-title {color: #444;font-size: 20px;margin-bottom: 25px;text-align: center;}
+.supporter-bar{width:580px;height:150px;}
+.supporter-face{width:150px;height:150px;}
+.supporter-info{width:379px;height:118px;padding: 15px 20px 15px 30px;background:#fff;border-width:1px 1px 1px 0;border-style:solid;border-color:#E0E0E0;}
+.supporter-info .supporter-intro{border-bottom:2px solid #ff9100;padding-bottom:3px;display:inline-block;}
+.supporter-info .supporter-name{color: #444;font-size: 18px;}
+.supporter-info .supporter-pos{color: #444;font-size: 15px;padding-left: 20px;}
+.supporter-info .supporter-rated{color: #666;line-height: 24px;margin-top: 15px;width: 100%;}
+
+/**** 合作伙伴 ****/
+.partner{ height:auto; background-color:#fff; margin-bottom:65px;}
+.partner p{ height:74px;  color:#4e4e4e; font-size:24px; text-align:center; border-bottom:#d3d3d3 1px solid; line-height:74px;}
+.partner-img {padding:25px 85px;}

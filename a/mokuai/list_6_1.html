@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>模块_门户管理</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="" />
+		<link rel="stylesheet" type="text/css" href="/templets/menhu/css/base_test1.css">
+		<link rel="stylesheet" type="text/css" href="/templets/menhu/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/templets/menhu/css/alter.css">
+	</head>
+
+	<body>
+		<style>
+			.headercom {
+				line-height: 39px;
+				font-size: 14px;
+				color: #666;
+				text-align: center;
+				float: left;
+				margin-right: 15px;
+				display: inline;
+				padding-top: 1px;
+			}
+			.headercom:hover {
+				color: #ff9100;
+			}
+			.userxufei:hover {
+				opacity: 0.8;
+			}
+			.top-contact:hover {
+				opacity: 1;
+			}
+		</style>
+		<div class="user-top user-top-a" style="">
+			<div class="w1200 clearfix">
+				<a href="/" target="_blank" class="headercom">首页</a>
+				
+				<a href="/a/jindu/"  target="_blank" class="headercom">项目进度</a>
+				
+				<a href="/a/menhu/"  target="_blank" class="headercom">门户定制</a>
+				<a class='headercom' style='color:#ff9100;' href='/a/mokuai/' >模块</a>
+			</div>
+		</div>
+		<div class="user-top" style="background:#fafafa;margin-bottom:2px;" id="fixed-xuanfu">
+			<div class="w1200 clearfix">
+				<a href="http://888pic.com/" class="logo fl"></a>
+				<form  name="formsearch" action="/plus/search.php">
+				<div class="top-search  fr" style="left: 0px;top: 0px;"><input type="text" id="so-kw" name="q" style="width: 569px;height: 46px;" placeholder="搜单位名称" class="text-search fl" maxlength="30"><input type="submit" value="搜索" class="but-search fl" id="z_searchbtn" style="font-size: 18px;height: 50px;">
+				</div>
+				</form>
+			</div>
+		</div>
+		<div id="main">
+			<div class="wrapper w1200">
+				<div class="type">
+					<div class="type-nav">
+						<span class="on">全部</span>&nbsp;<a title="通栏" href="/plus/list.php?tid=6&layout=%E9%80%9A%E6%A0%8F">通栏</a>&nbsp;<a title="居中" href="/plus/list.php?tid=6&layout=%E5%B1%85%E4%B8%AD">居中</a>&nbsp;<a title="响应式" href="/plus/list.php?tid=6&layout=%E5%93%8D%E5%BA%94%E5%BC%8F">响应式</a>&nbsp;<a title="移动端" href="/plus/list.php?tid=6&layout=%E7%A7%BB%E5%8A%A8%E7%AB%AF">移动端</a>&nbsp;<br/>
+					</div>
+					<!--菜单栏新改-->
+					<div class="nav-type">
+						<div class="type-item clearfix">
+							<!--分类-->
+							<div class="item-tit fl">
+								<span>院校</span>
+							</div>
+							<div class="item-main fl">
+								<div class="list">
+									<span class="on">全部</span>&nbsp;<a title="大学" href="/plus/list.php?tid=6&school=%E5%A4%A7%E5%AD%A6">大学</a>&nbsp;<a title="中学" href="/plus/list.php?tid=6&school=%E4%B8%AD%E5%AD%A6">中学</a>&nbsp;<a title="小学" href="/plus/list.php?tid=6&school=%E5%B0%8F%E5%AD%A6">小学</a>&nbsp;<a title="其他" href="/plus/list.php?tid=6&school=%E5%85%B6%E4%BB%96">其他</a>&nbsp;<br/>
+								</div>
+							</div>
+						</div>
+						<!--子分类-->
+						<div class="type-item clearfix">
+							<!--分类-->
+							<div class="item-tit fl">
+								<span>色系</span>
+							</div>
+
+							<div class="item-main fl">
+								<div class="list">
+									<span class="on">全部</span>&nbsp;<a title="无色" href="/plus/list.php?tid=6&colors=%E6%97%A0%E8%89%B2">无色</a>&nbsp;<a title="红色" href="/plus/list.php?tid=6&colors=%E7%BA%A2%E8%89%B2">红色</a>&nbsp;<a title="橙色" href="/plus/list.php?tid=6&colors=%E6%A9%99%E8%89%B2">橙色</a>&nbsp;<a title="黄色" href="/plus/list.php?tid=6&colors=%E9%BB%84%E8%89%B2">黄色</a>&nbsp;<a title="绿色" href="/plus/list.php?tid=6&colors=%E7%BB%BF%E8%89%B2">绿色</a>&nbsp;<a title="青色" href="/plus/list.php?tid=6&colors=%E9%9D%92%E8%89%B2">青色</a>&nbsp;<a title="蓝色" href="/plus/list.php?tid=6&colors=%E8%93%9D%E8%89%B2">蓝色</a>&nbsp;<a title="紫色" href="/plus/list.php?tid=6&colors=%E7%B4%AB%E8%89%B2">紫色</a>&nbsp;<br/>
+								</div>
+							</div>
+						</div>
+						<!--子分类-->
+					</div>
+
+					<!--推荐想找-->
+					<div class="type-filter">
+						<!--<a href="#" class="on">综合排序</a>
+						<a href="#">热门下载</a>
+						<a href="#">新上传</a>-->
+						<span class="on">全部</span>&nbsp;<a title="胥严方" href="/plus/list.php?tid=6&fontend=%E8%83%A5%E4%B8%A5%E6%96%B9">胥严方</a>&nbsp;<a title="孙利利" href="/plus/list.php?tid=6&fontend=%E5%AD%99%E5%88%A9%E5%88%A9">孙利利</a>&nbsp;<a title="钱俊杰" href="/plus/list.php?tid=6&fontend=%E9%92%B1%E4%BF%8A%E6%9D%B0">钱俊杰</a>&nbsp;<a title="张中乐" href="/plus/list.php?tid=6&fontend=%E5%BC%A0%E4%B8%AD%E4%B9%90">张中乐</a>&nbsp;<a title="王文丽" href="/plus/list.php?tid=6&fontend=%E7%8E%8B%E6%96%87%E4%B8%BD">王文丽</a>&nbsp;<a title="李婷" href="/plus/list.php?tid=6&fontend=%E6%9D%8E%E5%A9%B7">李婷</a>&nbsp;<br/>
+					</div>
+				</div>
+
+				<div class="result">
+
+					<div class="content-index clearfix">
+						
+					</div>
+					<div class="pagelist">
+	                	<em class="pageinfo">共 0页0条记录</em>
+
+					</div>
+				</div>
+				<!--反馈弹窗-->
+				<div class="problem-feedback">
+					<div class="mask"></div>
+					<div class="problem">
+						<span class="close-mask"></span>
+						<p class="search-feedback">搜索问题反馈</p>
+						<div class="result-sel">
+							<ul>
+								<li class="current"><span>搜索无结果</span><i></i></li>
+								<li><span>搜到的模板质量不高</span><i></i></li>
+								<li class="last-sel"><span>搜索不准确</span><i></i></li>
+							</ul>
+							<div class="other-question">
+								<p>其他问题</p>
+								<textarea placeholder="在此输入内容" name="search-advise"></textarea>
+							</div>
+							<div class="contact">
+								<p>您的联系方式</p>
+								<input type="text" placeholder="请输入QQ或手机" name="adviser-contact">
+							</div>
+							<a href="javascript:void(0);">
+								<div class="sure-but">提交</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<input type="hidden" value="185" id="search_id">
+				<input type="hidden" value="1" id="search_p">
+				<input type="hidden" value="16" id="sphinxCount">
+			</div>
+		</div>
+		
+
+		
+		
+		<script src="/templets/menhu/js/jquery.js"></script>
+		<div class="footer">
+	<div class="foot">
+		<p>若有疑问，请联系QQ:1206762787，我们将尽快处理</p>
+		<p>
+			<a href="#" target="_blank">关于我们</a> - Copyright © 2016 沪ICP备1058741号-7</p>
+			
+			
+	</div>
+</div>
+
+
+
+
+<!--右侧悬浮-->
+
+<div id="fixed">
+	<div class="fixed-but">
+		<a href="javascript:void(0);" class="fankui">给我们点建议吧<i></i></a>
+		<div class="my-browse-but">
+			<i></i>
+			<span>我看过的</span>
+		</div>
+		<!-- <a href="" class="collect-web"><i></i><span>收藏本站</span></a> -->
+		<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=800053584" class="contact-kf">联系客服</a>
+		<div class="back-top" id="gotop"><i></i><span>返回顶部</span></div>
+	</div>
+
+	<div id="browse" class="clearfix">
+		<div class="browse-m clearfix">
+			<div class="browse-bg"></div>
+			<div class="browse">
+				<div class="browse-top">
+					<i class="close-but"></i>
+					<p class="title">我看过的</p>
+					<div class="my-browse">
+						<span></span>个模板
+					</div>
+				</div>
+				<div class="browse-center">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<!--反馈弹窗-->
+<div class="feedback">
+	<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+	<input type="hidden" name="action" value="post">
+	<input type="hidden" name="diyid" value="1">
+	<input type="hidden" name="do" value="2">
+	<div class="mask"></div>
+	<div class="feedback-box">
+		<h2>欢迎您留下对我们网站的宝贵建议！</h2>
+		<textarea name="goodidea" id="goodidea" style="width:90%;height:80" placeholder="您的意见或建议对我们非常宝贵，如经采取，您会领到相应的奖励"></textarea>
+		<div class="Leave-qq"><span>请留下您的QQ</span><input type="text" name="calltype" id="calltype" class="input-text" value="">
+		</div>
+		<div class="Leave-qq"><span>还有验证码</span><input name="validate" type="text" id="vdcode" style="text-transform:uppercase;" size="8"/>    
+		<img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="/include/vdimgck.php"/>    
+		<a href="javascript:vide(-1);" onClick="changeAuthCode();">看不清？ </a>
+		</div>
+		<input type="hidden" name="dede_fields" value="goodidea,multitext;calltype,text">
+		<input type="hidden" name="dede_fieldshash" value="094cd76a70da5fe4a2c6b185809665b2">
+		<div class="sub-but"><input type="submit" name="submit" value="提 交"></div>
+			<div class="sub-but-no">菊花疼，不想交了</div>
+	</div>
+	<div class="feedback-box-over"> 你的声音，我们的动力 感谢您的参与！
+	</div>
+	</form>
+</div>
+<div id="inspire-login-mask" style="width: 100%; height: 100%; opacity: 0.5; position: fixed; z-index: 5; top: 0px; left: 0px; display: none; background: black;"></div>
+
+
+
+<!--登录注册的弹窗暂时没有用着-->
+		<div class="Login">
+			<div class="Login-div">
+				<span class="close-but"></span>
+				<div class="login-title"></div>
+				<dl style="width:195px;">
+					<a href="javascript:;" onclick="toLogin()" id="login"><dt style="margin-left: 10px;"><img class="icon-qq" data-original="http://js.888pic.com/images/com/icon-qq.png"></dt></a>
+					<dd class="login-notice"></dd>
+				</dl>
+			</div>
+		</div>
+
+<script type="text/javascript">
+	// 给我们留言
+			$(".fankui").click(function(){
+				$("#inspire-login-mask").show();
+				$(".feedback").show();
+			});
+			//不想留言了
+			$(".sub-but-no").click(function(){
+				$("#inspire-login-mask").hide();
+				$(".feedback").hide();
+			});
+			//留言的验证码
+			function changeAuthCode() {    
+			
+			   var num =     new Date().getTime();  
+			
+			   var rand = Math.round(Math.random() * 10000);  
+			
+			   num = num + rand;  
+			
+			   $('#ver_code').css('visibility','visible');  
+			
+			   if ($("#vdimgck")[0]) {  
+			
+			       $("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;  
+			
+			   }  
+			
+			   return false;      
+			
+			}  
+			
+			
+</script>
+		<script src="/templets/menhu/js/base_v3.29.js"></script>
+		<script>
+			$(function() {
+				$('#error-area').on('click', '.r-s', function() {
+					var kw = $.trim($(this).text());
+					search(kw);
+				});
+
+
+
+				//弹窗的关闭
+				$(".problem-feedback .close-mask").click(function() {
+					$(".problem-feedback ").fadeOut(300);
+				});
+				
+
+				var keyword = $("#so-kw").val();
+				var sphinxCount = $("#sphinxCount").val();
+				
+			});
+		</script>
+		<script>
+			var fixedTop = $('#fixed-xuanfu').offset().top;
+			$(window).bind('scroll', function() {
+				if($(window).scrollTop() > fixedTop) {
+					$('#fixed-xuanfu').css('position', 'fixed');
+					$('#fixed-xuanfu').css('z-index', '9999');
+					$('#fixed-xuanfu').css('top', '0');
+					$('#fixed-xuanfu').css('left', '0');
+				} else {
+					$('#fixed-xuanfu').css('position', '');
+				}
+			});
+			$(function() {
+				$(".type-con a").on('click', function() {
+					$(this).parent().parent().fadeOut();
+				});
+
+				//选择标签 关闭
+				$(".nav-chosed .chosed-tab").find('span').click(function() {
+						$(this).parent().remove()
+					})
+			})
+		</script>
+
+	</body>
+
+</html>

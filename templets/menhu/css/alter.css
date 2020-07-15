@@ -1,0 +1,60 @@
+/*标签选定按钮*/
+.nav-chosed{margin: -5px 0 15px 0;}
+.nav-chosed span{font-size: 12px;color: #8e8e8e;display: inline-block;line-height: 20px;}
+.nav-chosed span i{display: inline-block;width: 5px;height: 9px;background: url("http://js.888pic.com/images/tags/lit-icons.png") no-repeat 0 0;margin-left: 3px;}
+.nav-chosed .chosed-tab{display: inline-block;padding: 0 5px;font-size: 12px;height: 18px;line-height: 18px;text-align: center;color: #8e8e8e;border: 1px solid #d6d6d6;margin: 0 4px;}
+.nav-chosed .chosed-tab .btn-close{display: inline-block;width: 9px;height: 9px;cursor: pointer;background: url("http://js.888pic.com/images/tags/lit-icons.png") no-repeat -8px 0;margin-left: 5px;}
+.nav-chosed .chosed-tab:hover{color: #ff9100;border-color: #ff9100;}
+.nav-chosed .chosed-tab:hover .btn-close{background-position: -19px 0;}
+
+/*猜你喜欢*/
+.want-find{height: 32px;line-height: 32px;border:1px dashed #ff9100;font-size: 12px;color: #aaa;margin-top:20px; }
+.want-find span{display: inline-block;margin: 0 40px 0 20px;}
+.want-find a{display: inline-block;margin-right: 30px;}
+.want-find a:hover{color:#ff9100;}
+
+
+/*格式*/
+.more-type .type-filter{width: 564px;}
+.more-type .type-form{width: 564px;height: 30px;line-height: 30px;background-color: #f3f1ee;margin-top: 22px;color: #898989;font-size: 14px;}
+.more-type .type-form span{display: inline-block;margin-left: 25px;}
+.more-type .type-form a{display: inline-block;padding:  0 8px; height: 20px;line-height: 20px;text-align: center;color:#898989;margin: 0 5px;}
+.more-type .type-form a:hover,.more-type .type-form a.on{background-color: #ff9100;border-radius: 2px;color: #fff;}
+
+
+/*菜单栏新版*/
+.nav-type .type-item{ border-bottom: #e7e2d9 1px solid;  background-color: #f4ebe0;}
+.nav-type .type-item .item-tit{  width: 112px;  min-height: 48px;  height: auto;  background-color: #f4ebe0;  color: #ff9100;  font-size: 14px;  font-weight: bolder;  }
+.nav-type .type-item .item-tit span{  display: inline-block;  width: 112px;  height: auto;  line-height: 48px;  text-align: center;  }
+.nav-type .type-item .item-main{position: relative;overflow: hidden; margin-left: 112px;}
+.nav-type .type-item .item-main .list {  /*width: 1014px;*/  height: 36px;  background-color: #f3f1ee;  padding: 0 54px 0 20px;  padding-top: 12px;  overflow: hidden;  }
+.nav-type .type-item .item-main .list a,.nav-type .type-item .item-main .list span{  display: inline-block;  height: 24px;  line-height: 24px;  padding: 0 10px;  background-color: #f3f1ee;  color: #898989;  margin-right: 15px;  margin-bottom: 12px;  }
+.nav-type .type-item .item-main .list  a:hover,.nav-type .type-item .item-main .list span.on {  background-color: #ff9100;  color: #fff;}
+.nav-type .type-item .item-main .look-more{display: inline-block;text-align: center;color: #898989;position: absolute;top: 15px;right: 20px;}
+.nav-type .type-item .item-main .look-more i{display: inline-block;width: 9px;height: 5px;background: url("http://js.888pic.com/images/tags/lit-icons.png") no-repeat -30px 0; vertical-align: middle;margin-right: 8px;}
+.nav-type .type-item .item-main .look-more.check{color: #ff9100;}
+.nav-type .type-item .item-main .look-more.check i{background-position: -42px 0;}
+
+
+.headercom {
+    line-height: 39px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+    display: inline;
+    padding-top: 1px;
+}
+
+.headercom:hover {
+    color: #ff9100;
+}
+
+.userxufei:hover {
+    opacity: 0.8;
+}
+
+.top-contact:hover {
+    opacity: 1;
+}

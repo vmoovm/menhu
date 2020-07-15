@@ -1,0 +1,5 @@
+INSERT INTO `mh_admin` VALUES('1','10','admin','f297a57a5a743894a0e4','admin','','','','1493273120','127.0.0.1');
+INSERT INTO `mh_admin` VALUES('4','5','yanfang','cd5af0378da05f63f891','胥严方','胥严方','yanfang@chaoxing.com','','1483092535','192.168.98.167');
+INSERT INTO `mh_admin` VALUES('5','5','lili','cd5af0378da05f63f891','孙利利','孙利利','sunlili@chaoxing.com','4','1483092399','192.168.98.166');
+INSERT INTO `mh_admin` VALUES('6','5','junjie','cd5af0378da05f63f891','钱俊杰','钱俊杰','qianjunjie@chaoxing.com','4','1482983758','192.168.99.156');
+INSERT INTO `mh_admin` VALUES('7','5','zhongle','cd5af0378da05f63f891','张中乐','张中乐','zhongle@chaoxing.com','4','1483089705','127.0.0.1');

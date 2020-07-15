@@ -1,0 +1,7 @@
+INSERT INTO `mh_member_tj` VALUES('1','0','0','0','1','512','0','0','2','0','0','0');
+INSERT INTO `mh_member_tj` VALUES('2','0','0','0','3','3','0','0','1','0','0','0');
+INSERT INTO `mh_member_tj` VALUES('3','0','0','0','0','0','0','0','0','0','0','0');
+INSERT INTO `mh_member_tj` VALUES('4','0','0','0','0','137','0','0','0','0','0','0');
+INSERT INTO `mh_member_tj` VALUES('5','0','0','0','0','43','0','0','0','0','0','0');
+INSERT INTO `mh_member_tj` VALUES('6','0','0','0','0','18','0','0','0','0','0','0');
+INSERT INTO `mh_member_tj` VALUES('7','0','0','0','0','22','0','0','0','0','0','0');

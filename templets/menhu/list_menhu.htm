@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+		<meta name="keywords" content="{dede:field name='keywords'/}">
+		<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/base_test1.css">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/style.css">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/alter.css">
+	</head>
+
+	<body>
+		{dede:include filename="head.htm"/}
+		<div id="main">
+			<div class="wrapper w1200">
+				<div class="type">
+					<div class="type-nav">
+						{dede:php} AddFilter(17,1,'layout'); {/dede:php}
+					</div>
+					<!--菜单栏新改-->
+					<div class="nav-type">
+						<div class="type-item clearfix">
+							<!--分类-->
+							<div class="item-tit fl">
+								<span>院校</span>
+							</div>
+							<div class="item-main fl">
+								<div class="list">
+									{dede:php} AddFilter(17,1,'school'); {/dede:php}
+								</div>
+							</div>
+						</div>
+						<!--子分类-->
+						<div class="type-item clearfix">
+							<!--分类-->
+							<div class="item-tit fl">
+								<span>色系</span>
+							</div>
+
+							<div class="item-main fl">
+								<div class="list">
+									{dede:php} AddFilter(17,1,'colors'); {/dede:php}
+								</div>
+							</div>
+						</div>
+						<!--子分类-->
+					</div>
+
+					<!--推荐想找-->
+					<div class="type-filter">
+						<!--<a href="#" class="on">综合排序</a>
+						<a href="#">热门下载</a>
+						<a href="#">新上传</a>-->
+						{dede:php} AddFilter(17,1,'fontend'); {/dede:php}
+					</div>
+				</div>
+
+				<div class="result">
+
+					<div class="content-index clearfix">
+						{dede:list pagesize='16'}
+						<div class="img-show fl">
+							<div class="img">
+								<a href="[field:arcurl/]" target="_blank"><img class="lazy" alt="[field:title function='html2text(@me)'/]" src="[field:litpic/]" style="display: inline;"></a>
+							</div>
+
+							<!--灵感vip-->
+							<div class="img-pos">
+								<a href="[field:htmlfile /]" target="_blank">
+									<div class="free-download"><i></i><span>免费下载</span></div>
+								</a>
+								<div class="img-opacity"></div>
+								<a href="[field:arcurl/]" target="_blank">
+									<div class="img-but" target="_blank">
+										<p>[field:title/]</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						{/dede:list}
+					</div>
+					<div class="pagelist">
+	                	{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+					</div>
+				</div>
+				<!--反馈弹窗-->
+				<div class="problem-feedback">
+					<div class="mask"></div>
+					<div class="problem">
+						<span class="close-mask"></span>
+						<p class="search-feedback">搜索问题反馈</p>
+						<div class="result-sel">
+							<ul>
+								<li class="current"><span>搜索无结果</span><i></i></li>
+								<li><span>搜到的模板质量不高</span><i></i></li>
+								<li class="last-sel"><span>搜索不准确</span><i></i></li>
+							</ul>
+							<div class="other-question">
+								<p>其他问题</p>
+								<textarea placeholder="在此输入内容" name="search-advise"></textarea>
+							</div>
+							<div class="contact">
+								<p>您的联系方式</p>
+								<input type="text" placeholder="请输入QQ或手机" name="adviser-contact">
+							</div>
+							<a href="javascript:void(0);">
+								<div class="sure-but">提交</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<input type="hidden" value="185" id="search_id">
+				<input type="hidden" value="1" id="search_p">
+				<input type="hidden" value="16" id="sphinxCount">
+			</div>
+		</div>
+		
+
+		
+		
+		<script src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+		{dede:include filename="footer.htm"/}
+		<script src="{dede:global.cfg_templets_skin/}/js/base_v3.29.js"></script>
+		<script>
+			$(function() {
+				$('#error-area').on('click', '.r-s', function() {
+					var kw = $.trim($(this).text());
+					search(kw);
+				});
+
+
+
+				//弹窗的关闭
+				$(".problem-feedback .close-mask").click(function() {
+					$(".problem-feedback ").fadeOut(300);
+				});
+				
+
+				var keyword = $("#so-kw").val();
+				var sphinxCount = $("#sphinxCount").val();
+				
+			});
+		</script>
+		<script>
+			var fixedTop = $('#fixed-xuanfu').offset().top;
+			$(window).bind('scroll', function() {
+				if($(window).scrollTop() > fixedTop) {
+					$('#fixed-xuanfu').css('position', 'fixed');
+					$('#fixed-xuanfu').css('z-index', '9999');
+					$('#fixed-xuanfu').css('top', '0');
+					$('#fixed-xuanfu').css('left', '0');
+				} else {
+					$('#fixed-xuanfu').css('position', '');
+				}
+			});
+			$(function() {
+				$(".type-con a").on('click', function() {
+					$(this).parent().parent().fadeOut();
+				});
+
+				//选择标签 关闭
+				$(".nav-chosed .chosed-tab").find('span').click(function() {
+						$(this).parent().remove()
+					})
+			})
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,1 @@
+INSERT INTO `mh_homepageset` VALUES('menhu/index.htm','../index.html','0');

@@ -1,0 +1,91 @@
+@charset "utf-8";
+/*****本css针对于下载确认页******/
+.down-head{height:100px; background: #9d794a;}
+.down-head .head-m{position: relative; width: 1200px;height:100px;margin:0 auto;}
+.down-head .head-m h3{ font-size:40px;color:#ffffff;text-align: center;line-height:100px; }
+.down-head .head-m .back{position: absolute;left: 0;top:25px; line-height: 50px; font-size: 18px;}
+.down-head .head-m .back a{text-decoration: underline;color:#fff;font-size: 18px;}
+.down-head .head-m .user-info{position: absolute;right: 0;font-size: 18px;color:#fff;top:25px; line-height: 56px;}
+.down-head .head-m .user-info a{color:#fff;font-size: 18px; display: inline-block; margin:  0 5px;}
+
+.download-page{width: 1200px;margin:0 auto;padding-top: 45px;}
+.download-page .page-l{border:1px #ccc solid; width:238px;box-shadow:0 0 7px rgba(6,0,1,.5);margin-left: 200px;background: #fff; height: 360px;}
+.download-page .page-l img{ display: block; height: 360px; overflow: hidden; }
+.download-page .page-r{ width: 490px;  margin-right: 215px;}
+.download-page .page-r .down-but{padding:0 0 35px;border-bottom:1px #ccc solid; margin-bottom:12px}
+.download-page .page-r .down-but a{ display: inline-block; height:61px;width:218px;line-height:61px;color:#fff;font-size: 16px;text-align: center;background: #ff9100; border: 1px solid #b66700 ;}
+.download-page .page-r .down-but .dianxin{ margin-right: 44px; }
+.download-page .page-r .down-but a:hover{background: #ffa937;}
+.download-page .page-r .img-name{ line-height: 20px; color:#4e4e4e; font-size: 16px; padding-bottom:50px; }
+.download-page .page-r .img-info{line-height: 30px; font-size: 14px;color:#5e5e5e;}
+.download-page .page-r .img-info p{ width: 160px; line-height: 40px; }
+.download-page .page-r .img-info a:hover{color:#018cc8;}
+.download-page .page-r .img-action{color:#5e5e5e;font-size:14px; line-height: 30px;  margin-top: 5px;}
+.download-page .page-r .img-action a{ color: #ff9100 }
+.action-txt{ width:790px; margin:110px auto; color: #9d794a}
+.action-txt a{ color: #ff9100 }
+
+/***  立即赞助按钮  2016-09-08***/
+.download-page .page-r .download-pass{ width:436px; height:46px; background-color:#fbefe1; padding:23px 23px; margin-bottom:10px}
+.download-page .page-r .download-pass span{ color:#ff9100; font-size:18px; font-weight:bolder; line-height:46px; padding-right:25px;}
+.download-page .page-r .download-pass a{ display:inline-block; width:178px; height:46px; line-height:46px; text-align:center; color:#fff; font-weight:bolder; background-color:#ee642e; border-radius:2px; font-size:18px; box-shadow:0 0 3px rgba(7,0,2,0.5)}
+.download-page .page-r .download-pass a:hover{ opacity:0.9}
+/* 下载限制弹窗 begin */
+.limit-more{ position:fixed; top:0; left:0; width:100%; height:100%; z-index:110;}
+.other-more-div{ position:absolute; top: 50%; left: 50%; margin-top: -247px; margin-left:-378px; width:755px; height:494px;background-color:#fff; box-shadow: 0 0 5px rgba(6,0,1,0.3)}
+.limit-more .close-but{ display: inline-block; position: absolute; top:10px; right: 10px;width:19px; height:19px; background: url(../images/icon-public.png)  -29px -25px; cursor: pointer; }
+.limit-more .other-tite-top{ height: 83px;  width: 100%; background: url(../images/limit-bg.jpg) repeat-x; line-height: 83px; text-align:center; color:#fff; font-size: 20px;  font-weight: bolder;}
+.limit-more .now{ color: #323232; font-size:24px;  text-align: center; margin-top: 80px; }
+.limit-more .go-up{ color: #5c5c5c; text-align: center; font-size: 18px; margin:60px 0 70px 0; }
+.limit-more .go-up span{ color: #ff9100 }
+.limit-more .go-up-but{ width: 420px; height: 80px; background-color: #ff9100; color: #fff; font-size: 20px; font-weight: bolder; text-align: center; margin: 0 auto; line-height: 80px; }
+/* 下载限制弹窗 end */
+/* 填写信息弹窗 begin */
+.other-more{width: 100%;height: 100%;position: fixed;top: 0;left: 0;}
+.other-more .mask{width: 100%;height: 100%;background-color: #000;opacity: .4;filter: alpha(opacity=40);}
+.other-more .more-content{width: 798px;height: 648px;border: 1px solid #d3d3d3;box-shadow: 0px 0px 30px #999;position: absolute;top: 50%;left: 50%;margin-top: -320px;margin-left: -400px;background-color: #fafafa}
+.other-more .more-content .more-content-top{border-bottom: 1px solid #d7d7d7;}
+.other-more .more-content .more-content-top span{display: inline-block;width: 15px;height: 15px;background: url(../images/maskClose.png) no-repeat;position: absolute;top: 0;right: 0;margin-top: 10px;margin-right: 10px;text-indent: -999px;cursor: pointer;}
+.other-more .more-content .more-content-top p{padding: 25px 0px;text-align: center;font-size: 18px;color: #ff9100;font-weight: 600;font-family: "微软雅黑";}
+.other-more .more-content .more-choose{width: 757px;margin: 0 auto;overflow: hidden;}
+.other-more .more-content .more-choose .m-tips h3{display: inline-block;font-size: 18px;color: #6b6b6b;margin: 25px 0;padding-left: 15px;border-left: 5px solid #ff9100;font-weight: 600;}
+.other-more .more-content .more-choose .m-options:after{clear: both;content: '';display: block;height: 0;overflow: hidden;}
+.other-more .more-content .more-choose .m-options .m-select{width: 145px;height: 71px;padding: 15px;border: 1px solid #dbdbdb;float: left;margin: 0 6px 13px 6px;cursor: pointer;}
+.other-more .more-content .more-choose .m-options .m-select span{font-size: 16px;color: #4b4b4b;font-weight: 600;}
+.other-more .more-content .more-choose .m-options .m-select span .on-choose{cursor: pointer; display: inline-block;width: 20px;height: 15px;background-image: url(http://js.888pic.com/images/download/choose-ico.png);background-repeat: no-repeat; vertical-align: -1px;margin-right: 15px;}
+.other-more .more-content .more-choose .m-options .m-select P{font-size: 14px;color: #868686;line-height: 22px;margin-top: 10px;}
+.other-more .more-content .more-choose .m-options .m-select.select-other input{display: block;height: 20px;padding: 10px 0px 10px 10px;font-size: 14px;width: 506px;margin-top: 10px;border: 1px solid #DBDBDB;}
+.other-more .more-content .more-choose .m-options .q-input{width: 263px;height: 28px;padding: 0;border: none;float: left;margin: 0 6px 13px 6px;}
+.other-more .more-content .more-choose .m-options .q-input input{width: 100%;height: 100%;outline: none;padding: 5px; 0 5px 10px;border: 1px solid #dbdbdb;}
+.actPosition{background-position: -22px 0px;}
+.other-more .more-content .m-submit{margin-top: 70px;}
+.other-more .more-content .m-submit a{display: block; width: 236px;height: 60px;margin: 0 auto;text-align: center;line-height: 60px;color: #fff;background-color: #FF9100;font-size: 18px;font-weight: 600;}
+/* 填写信息弹窗 end */
+
+
+
+/*** vip体验以及到期提醒弹窗 ***/
+.vip-experience-mask,.vip-expire-mask{ position:fixed; top:0; left:0; width:100%; height:100%; z-index:100;}
+.vip-experience-mask .mask,.vip-expire-mask .mask{width:100%; height:100%;background: #000;opacity: 0.2;filter:alpha(opacity=20);zoom:1; }
+.experience-box{ position:absolute; top: 50%; left: 50%; margin-top: -245px; margin-left:-378px; width:755px; height:490px;background-color:#fff; box-shadow:0 0 5px rgba(6,0,1,0.3)}
+.mask-top{ height:76px;width:100%; background:url(../images/user-infor-dl.png) repeat-x; line-height:76px; color:#fff; font-size:20px; font-weight:bolder; text-align:center; position:relative}
+.mask-top span{ width:23px; height:23px; background:url(../images/close-mask.png); display:inline-block; position:absolute ; top:15px; right:15px; cursor:pointer; transition:all 0.2s;-webkit-transition:all 0.2s;-ms-transition:all 0.2s;-o-transition:all 0.2s;-moz-transition:all 0.2s;}
+.mask-top span:hover{transform:rotate(180deg);
+    -ms-transform:rotate(180deg); 	/* IE 9 */
+    -moz-transform:rotate(180deg); 	/* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg); 	/* Opera */}
+.mask-box .congratulate{ text-align:center; font-size:24px; color:#ff5400; padding:120px 0 110px;}
+.mask-box  .but-link{ background-color:#ff9100; color:#fff; color:#fff; font-weight:bolder; text-align:center; height:60px; line-height:60px; width:290px; margin:0 auto; font-size:20px;}
+.mask-box  .but-link:hover{ opacity:0.9}
+.expire-box{ position:absolute; z-index:100; bottom:0px;right:0px; width:400px; height:320px;background-color:#fff;box-shadow: 0 0 3px rgba(150, 142, 137, 0.5)}
+.expire-box .mask-box .congratulate{  font-size:24px; padding:50px 0 50px;}
+.expire-box .mask-box  .but-link{font-size:24px;}
+
+
+
+
+
+
+
+

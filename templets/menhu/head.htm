@@ -1,0 +1,38 @@
+<style>
+			.headercom {
+				line-height: 39px;
+				font-size: 14px;
+				color: #666;
+				text-align: center;
+				float: left;
+				margin-right: 15px;
+				display: inline;
+				padding-top: 1px;
+			}
+			.headercom:hover {
+				color: #ff9100;
+			}
+			.userxufei:hover {
+				opacity: 0.8;
+			}
+			.top-contact:hover {
+				opacity: 1;
+			}
+		</style>
+		<div class="user-top user-top-a" style="">
+			<div class="w1200 clearfix">
+				<a href="{dede:global.cfg_cmsurl/}/" target="_blank" class="headercom">首页</a>
+				{dede:channel type='top' row='6' currentstyle="<a  class='headercom' style='color:#ff9100;' href='~typelink~' ~rel~>~typename~</a>"}
+				<a href="[field:typeurl/]" [field:rel/] target="_blank" class="headercom">[field:typename/]</a>
+				{/dede:channel}
+			</div>
+		</div>
+		<div class="user-top" style="background:#fafafa;margin-bottom:2px;" id="fixed-xuanfu">
+			<div class="w1200 clearfix">
+				<a href="http://888pic.com/" class="logo fl"></a>
+				<form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+				<div class="top-search  fr" style="left: 0px;top: 0px;"><input type="text" id="so-kw" name="q" style="width: 569px;height: 46px;" placeholder="搜单位名称" class="text-search fl" maxlength="30"><input type="submit" value="搜索" class="but-search fl" id="z_searchbtn" style="font-size: 18px;height: 50px;">
+				</div>
+				</form>
+			</div>
+		</div>

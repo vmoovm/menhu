@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+		<meta name="keywords" content="{dede:field name='keywords'/}">
+		<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/base_test1.css">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/style.css">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/alter.css">
+		<style type="text/css">
+			.result { padding-left: 30px; padding-right: 30px;}
+		</style>
+	</head>
+
+	<body>
+		{dede:include filename="head.htm"/}
+		<div id="main">
+			<div class="wrapper">
+				<div class="type" style="padding-left: 30px; padding-right: 30px; min-width: 1200px;">
+					<div class="type-nav">
+						{dede:php} AddFilter(18,1,'device'); {/dede:php}
+					</div>
+					<!--菜单栏新改-->
+					<div class="nav-type">
+						<div class="type-item clearfix">
+							<!--分类-->
+							<div class="item-tit fl">
+								<span>类型</span>
+							</div>
+							<div class="item-main">
+								<div class="list">
+									{dede:php} AddFilter(18,1,'type'); {/dede:php}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="result" style="min-width: 1200px;">
+					<div class="content-mokuai clearfix" id="data-list">
+						{dede:list pagesize='16'}
+						<div class="img-item fl">
+							<a class="img" href="[field:arcurl/]" target="_blank"><img class="lazy" alt="[field:title function='html2text(@me)'/]" src="[field:litpic/]" style="display: inline;"></a>
+						</div>
+						{/dede:list}
+					</div>
+					<a href="javascript:void(0)" class="more" id="more" page="2" type="1">加载更多</a>
+				</div>
+				<!--反馈弹窗-->
+				<div class="problem-feedback">
+					<div class="mask"></div>
+					<div class="problem">
+						<span class="close-mask"></span>
+						<p class="search-feedback">搜索问题反馈</p>
+						<div class="result-sel">
+							<ul>
+								<li class="current"><span>搜索无结果</span><i></i></li>
+								<li><span>搜到的模板质量不高</span><i></i></li>
+								<li class="last-sel"><span>搜索不准确</span><i></i></li>
+							</ul>
+							<div class="other-question">
+								<p>其他问题</p>
+								<textarea placeholder="在此输入内容" name="search-advise"></textarea>
+							</div>
+							<div class="contact">
+								<p>您的联系方式</p>
+								<input type="text" placeholder="请输入QQ或手机" name="adviser-contact">
+							</div>
+							<a href="javascript:void(0);">
+								<div class="sure-but">提交</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<input type="hidden" value="185" id="search_id">
+				<input type="hidden" value="1" id="search_p">
+				<input type="hidden" value="16" id="sphinxCount">
+			</div>
+		</div>
+		
+
+		
+		
+		<script src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+		{dede:include filename="footer.htm"/}
+		<script src="{dede:global.cfg_templets_skin/}/js/base_v3.29.js"></script>
+		<script>
+			$(function() {
+				$('#error-area').on('click', '.r-s', function() {
+					var kw = $.trim($(this).text());
+					search(kw);
+				});
+
+
+
+				//弹窗的关闭
+				$(".problem-feedback .close-mask").click(function() {
+					$(".problem-feedback ").fadeOut(300);
+				});
+				
+
+				var keyword = $("#so-kw").val();
+				var sphinxCount = $("#sphinxCount").val();
+				
+			});
+		</script>
+		<script>
+			var fixedTop = $('#fixed-xuanfu').offset().top;
+			$(window).bind('scroll', function() {
+				if($(window).scrollTop() > fixedTop) {
+					$('#fixed-xuanfu').css('position', 'fixed');
+					$('#fixed-xuanfu').css('z-index', '9999');
+					$('#fixed-xuanfu').css('top', '0');
+					$('#fixed-xuanfu').css('left', '0');
+				} else {
+					$('#fixed-xuanfu').css('position', '');
+				}
+			});
+			$(function() {
+				$(".type-con a").on('click', function() {
+					$(this).parent().parent().fadeOut();
+				});
+
+				//选择标签 关闭
+				$(".nav-chosed .chosed-tab").find('span').click(function() {
+						$(this).parent().remove()
+					})
+			})
+		</script>
+		<script type="text/javascript">
+			// 首页异步加载列表
+			var loadConfig = {
+				url_api:'/plus/list.php',
+				typeid:{dede:field name="typeid"/},
+				page:2, // 起始页码
+				pagesize:16, // 请求条数
+				loading : 0,
+			}
+			function  loadMoreApply(){
+				if(loadConfig.loading == 0){
+					 var typeid = loadConfig.typeid;
+					 var page = loadConfig.page;
+					 var pagesize = loadConfig.pagesize;
+					 var url = loadConfig.url_api,
+					 data={
+					 	ajax:'pullload',
+					 	typeid:typeid,
+					 	page:page,
+					 	pagesize:pagesize
+					 };
+						 loadConfig.loading = 1;
+						function ajax(url, data) {
+							$.ajax({
+								url: url,
+								data: data,
+								async: false,
+								type: 'GET',
+								dataType: 'json',
+								success: function(data) {
+									console.log(data);
+									// addContent(data);
+									arr = []
+									for (var d = 0; d < data.list.length; d++) {
+										arr.push({
+											sort: d,
+											src: data.list[d].picname,
+											href: data.list[d].arcurl
+										})
+									}
+									
+									
+									loadConfig.load_num = data.load_num;
+									console.log(loadConfig.page, loadConfig.load_num)
+									if(data.total<loadConfig.page*loadConfig.pagesize){
+										document.getElementById("more").removeEventListener('click', loadMoreApply, false);
+										document.getElementById("more").innerText="没有更多了"
+										document.getElementById("more").setAttribute("class","more more_over")
+										ishas = false
+									} else {
+										ishas = true
+									}
+									loadConfig.page++;
+									loadConfig.loading = 0;
+									
+									
+									loopComputer(arr, callfn)
+								}
+							});
+							
+						}
+						ajax(url,data);
+				}
+			}
+			// function addContent (rs){
+				// if(rs.statu== 1){
+					// var data = rs.list;
+					// var total = rs.total;
+					// var arr=[];
+					// var length = data.length;
+					// console.log(length)
+					// for(var i=0;i<length;i++){
+						// 
+						// arr.push('<div class="img-item fl">');
+						// arr.push('<a class="img" href="'+data[i].arcurl+'" target="_blank"><img class="lazy" alt="'+data[i].title+'" width="380" height="572" src="'+data[i].picname+'"/></a>');
+						// arr.push('<div class="img-pos">');
+						// arr.push('<a href="'+data[i].htmlfile+'" target="_blank">');
+						// arr.push('<div class="free-download"><i></i><span>免费下载</span></div>');
+						// arr.push('</a>');
+						// arr.push('<div class="img-opacity"></div>');
+						// arr.push('<a href="'+data[i].arcurl+'" target="_blank">');
+						// arr.push('<div class="img-but" target="_blank">');
+						// arr.push('<p>'+data[i].title+'</p>');
+						// arr.push('</div>');
+						// arr.push('</a>');
+						// arr.push('</div>');
+						// arr.push('</div>');
+					// }
+					// $('#data-list').append(arr.join(''));
+				// 
+					// loadConfig.load_num = rs.load_num;
+					// if(total<loadConfig.page*loadConfig.pagesize || loadConfig.page > loadConfig.load_num){
+						// // window.removeEventListener('srcoll',loadMoreApply,false);
+						// document.getElementById("more").removeEventListener('click', loadMoreApply, false);
+						// document.getElementById("more").innerText="没有更多了"
+						// document.getElementById("more").setAttribute("class","more more_over")
+					// }
+					// loadConfig.page++;
+					// loadConfig.loading = 0;
+					// 
+				// }
+			// }
+			function pullLoad(){
+				document.getElementById("more").addEventListener('click', loadMoreApply, false);
+			}
+			pullLoad()
+		</script>
+		<script type="text/javascript">
+			var imgs = $("#data-list").find('.img')
+			var arr = []
+			imgs.each(function (index) {
+				arr.push({
+					sort: index,
+					src: $(this).find('img').attr('src'),
+					href: $(this).attr('href')
+					
+				})
+			})
+			
+			// 计算图片等高--原理：先把小图拼成一个整体，把这个整体当成一张大图片，和指定宽度去缩放。然后用这个缩放比例再去计算出每张小图片宽高。
+			// 思路  取第一张图片高度，将所有图片设置和第一张图片等高 +++原理
+			function computerSize1(arr, pw) {
+				var result = []
+				var allw = arr[0].w // 第一张图片不计算
+				for (var c = 1; c < arr.length; c++) {
+					var h = arr[c].h // 暂存原始高
+					arr[c].h = arr[0].h // 
+					arr[c].w = arr[c].w * arr[c].h / h
+					allw += arr[c].w
+				}
+				var bili = pw / allw
+				for (var d = 0; d < arr.length; d++) {
+					result.push({
+						sort: arr[d].sort,
+						w: Math.floor(arr[d].w * bili),
+						h: Math.floor(arr[d].h * bili),
+						src: arr[d].src,
+						href: arr[d].href
+					})
+				}
+				return result
+			}
+		
+			// 获取图片尺寸
+			function Getsize(obj, long, callfn) {
+				var that = this
+				this.callfn = callfn
+				this.long = long
+				this.img = new Image()
+				this.img.src = obj.src
+				this.startm = new Date() * 1
+				this.num = 0
+				this.result = {
+					sort: obj.sort,
+					width: 0,
+					height: 0,
+					src: '',
+					href: obj.href
+				}
+				this.cleartimer = setInterval(function () {
+					that.num++
+					if (that.img.width || that.img.height) {
+						that.result.width = that.img.width, that.result.height = that.img.height, that.result.src = that.img.src
+						clearInterval(that.cleartimer)
+						return that.callfn(that.result)
+					} else if (new Date() *1 - that.startm > that.long) {
+						console.log('请求超时')
+						clearInterval(that.cleartimer)
+						return that.callfn(that.result)
+					}
+				}, 50)
+			}
+		
+			function loopComputer(arr, callfn) {
+				var temp = arr.slice()
+				if (!temp.length) {
+					return
+				}
+				var obj = temp.pop()
+				new Getsize(obj, 3000, callfn)
+				return loopComputer(temp, callfn)
+			}
+			
+			// 排序
+			function sort (arr) {
+				var arr = arr.slice()
+				var temp
+				newArr = []
+				for (var r = 0; r < arr.length; r++) {
+					for (s = 0; s < arr.length; s++) {
+						if (arr[r].sort < arr[s].sort) {
+							temp = arr[r]
+							arr[r] = arr[s]
+							arr[s] = temp
+						}
+					}
+				}
+				newArr = arr
+				return newArr
+			}
+			
+			var ishas = true // 是否还有数据
+			var yuarr = [] // 上次剩余
+			var imgarr = []
+			// 获取每张图片尺寸时的回调函数
+			function callfn (o) {
+				imgarr.push(o)
+				
+				if (imgarr.length != arr.length) return
+				imgarr = sort(imgarr)
+				console.log(imgarr)
+				var newArr = []
+				var mspace = 20 // 外间距
+				var imgw = 350 // 图片显示的大小
+				var pspace = 4 // 图片与包裹容器的内边距（边距*2）如：边距为4，写8，边距为6，写12
+				var pw = $("#data-list").width() + 20 // 减20为容错
+				for (var c = 0; c < imgarr.length; c++) {
+					newArr.push({sort: imgarr[c].sort, w:imgarr[c].width, h: imgarr[c].height, src: imgarr[c].src, href: imgarr[c].href})
+				}
+				if (yuarr.length >= 1) {
+					newArr = yuarr.concat(newArr)
+				}
+				var unit = Math.floor(pw/imgw) // 一行列数
+				var len = Math.ceil(newArr.length/unit) // 按内容实际分配列数
+				yuarr = []
+				var result = []
+				for (var g = 0; g < len; g++) { // 分组
+					var arr5 = newArr.splice(0, unit)
+					if (arr5.length < unit) {
+						if (!ishas) {
+							for (var s = 0; s < unit - arr5.length; s++) {
+								arr5.splice(arr5.length, 0, {sort: 100, w: 1000, h: 500, src: null, href: null})
+							}
+							result.push(computerSize1(arr5, pw-mspace*(unit-1) - (mspace + 2) * unit))
+						} else {
+							yuarr = arr5
+						}
+					} else {
+						result.push(computerSize1(arr5, pw-mspace*(unit-1) - (mspace + 2 ) * unit))
+					}
+				}
+				var html = ''
+				for (var m = 0; m < result.length; m++) {
+					// html += '<div style=" width: ' + pw + 'px;">'
+					for (var n = 0; n < result[m].length; n++) {
+						if (result[m][n].src != null) {
+							if (n == 0) {
+								html += '<div class="img-item" style="float:left; position: relative; margin-top:' + mspace + 'px; padding: '+ pspace +'px; width: '+ result[m][n].w +'px; height:' + result[m][n].h + 'px; animation-delay: ' + n*m*50 + 'ms;"><a href="' + result[m][n].href + '"><img src="' + result[m][n].src + '" style="width: '+ result[m][n].w +'px; height:' + result[m][n].h + 'px; " /></a></div>'
+							} else {
+								html += '<div class="img-item" style="float:left; position: relative; margin-top: ' + mspace + 'px; margin-left: ' + mspace + 'px; padding: ' + pspace +'px; width: '+ result[m][n].w +'px; height:' + result[m][n].h + 'px; animation-delay: ' + n*m*100 + 'ms;"><a href="' + result[m][n].href + '"><img src="' + result[m][n].src + '" style="width: '+ result[m][n].w +'px; height:' + result[m][n].h + 'px;" /></a></div>'
+							}
+						}
+					}
+					// html += '<div class="clear"></div></div>'
+				}
+				$("#data-list").append(html)
+				imgarr = []
+			}
+			
+			
+			
+			
+			$('#data-list').html('')
+			loopComputer(arr, callfn)
+			// 异步输入测试
+			// loopComputer(arr, callfn)
+			
+			
+			
+			
+			
+		</script>
+	</body>
+
+</html>
